@@ -1,7 +1,7 @@
 # ioBroker Fairland Adapter
 
-ioBroker adapter for Fairland pool heat pumps and pool pumps that use the
-Fairland **iGarden** cloud API.
+Unofficial ioBroker adapter for Fairland pool heat pumps and pool pumps that
+use the Fairland **iGarden** cloud API.
 
 This adapter talks directly to the iGarden cloud. It does not use Tuya and it
 does not support Fairland devices paired through the SmartPool app.
@@ -14,6 +14,9 @@ does not support Fairland devices paired through the SmartPool app.
 
 The adapter currently knows the device categories `heatPump` and `waterPump`.
 Unknown categories are logged and skipped.
+
+This project is not affiliated with, endorsed by, or supported by Fairland,
+Home Assistant, ioBroker, or the upstream ha-fairland project maintainers.
 
 ## Installation
 
@@ -139,3 +142,15 @@ npm run build
 ```
 
 The compiled adapter entry point is `build/main.js`.
+
+## Attribution
+
+This adapter is derived from the MIT-licensed Home Assistant Fairland
+integration by @siedi:
+
+```text
+https://github.com/siedi/ha-fairland
+```
+
+The original project license notice is preserved in `LICENSE`, and additional
+third-party notices are listed in `THIRD_PARTY_NOTICES.md`.
