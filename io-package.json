@@ -1,0 +1,100 @@
+{
+  "common": {
+    "name": "fairland",
+    "version": "0.1.0",
+    "titleLang": {
+      "en": "Fairland (iGarden)",
+      "de": "Fairland (iGarden)"
+    },
+    "desc": {
+      "en": "Controls and monitors Fairland iGarden pool heat pumps and pool pumps.",
+      "de": "Steuert und ueberwacht Fairland-iGarden Pool-Waermepumpen und Poolpumpen."
+    },
+    "authors": ["dude2k"],
+    "keywords": ["fairland", "igarden", "pool", "heat pump", "pump", "madimack"],
+    "license": "MIT",
+    "platform": "Javascript/Node.js",
+    "main": "build/main.js",
+    "enabled": true,
+    "mode": "daemon",
+    "type": "iot-systems",
+    "compact": true,
+    "connectionType": "cloud",
+    "dataSource": "poll",
+    "adminUI": {
+      "config": "json"
+    },
+    "loglevel": "info",
+    "readme": "https://github.com/dude2k/Fairland_Adapter/blob/main/README.md",
+    "news": {
+      "0.1.0": {
+        "en": "Initial ioBroker port of the Fairland iGarden integration.",
+        "de": "Erster ioBroker-Port der Fairland-iGarden-Integration."
+      }
+    },
+    "dependencies": [
+      {
+        "js-controller": ">=5.0.0"
+      }
+    ],
+    "encryptedNative": ["password"],
+    "tier": 3
+  },
+  "native": {
+    "accountName": "",
+    "password": "",
+    "scanInterval": 30,
+    "courtyardId": "",
+    "createRawStates": false
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "name": "Cloud connection",
+        "type": "boolean",
+        "role": "indicator.connected",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.region",
+      "type": "state",
+      "common": {
+        "name": "Detected API region",
+        "type": "string",
+        "role": "text",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.courtyard",
+      "type": "state",
+      "common": {
+        "name": "Selected courtyard",
+        "type": "string",
+        "role": "text",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "type": "panel",
+  "items": {
+    "accountName": {
+      "type": "text",
+      "label": "iGarden account e-mail",
+      "xs": 12,
+      "sm": 6,
+      "newLine": true
+    },
+    "password": {
+      "type": "password",
+      "label": "iGarden password",
+      "xs": 12,
+      "sm": 6
+    },
+    "scanInterval": {
+      "type": "number",
+      "label": "Scan interval in seconds",
+      "min": 10,
+      "max": 3600,
+      "xs": 12,
+      "sm": 6,
+      "default": 30,
+      "newLine": true
+    },
+    "courtyardId": {
+      "type": "text",
+      "label": "Courtyard ID (optional)",
+      "help": "Leave empty to use the first courtyard returned by the iGarden cloud. If you have several courtyards, set the desired ID from the adapter log.",
+      "xs": 12,
+      "sm": 6
+    },
+    "createRawStates": {
+      "type": "checkbox",
+      "label": "Create raw dpId states",
+      "help": "Creates raw states under devices.<device>.raw.dp_<id>. Writable raw states follow the cloud dpMode and are useful for diagnostics.",
+      "xs": 12,
+      "sm": 6,
+      "newLine": true
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "iobroker.fairland",
+  "version": "0.1.0",
+  "description": "ioBroker adapter for Fairland iGarden pool heat pumps and pool pumps",
+  "author": "dude2k",
+  "license": "MIT",
+  "homepage": "https://github.com/dude2k/Fairland_Adapter",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dude2k/Fairland_Adapter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dude2k/Fairland_Adapter/issues"
+  },
+  "main": "build/main.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "admin",
+    "build",
+    "io-package.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -w -p tsconfig.json",
+    "test": "npm run build",
+    "prepare": "npm run build",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "@iobroker/adapter-core": "^3.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.3"
+  }
+}
