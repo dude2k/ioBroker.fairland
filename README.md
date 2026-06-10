@@ -20,18 +20,26 @@ Home Assistant, ioBroker, or the upstream ha-fairland project maintainers.
 
 ## Installation
 
-The most reliable installation URL for ioBroker containers is the GitHub archive
-URL because it does not require an SSH client inside the container:
+This adapter is not published to npm or the official ioBroker repository yet.
+Install it from GitHub as a custom adapter.
+
+### ioBroker Admin UI
+
+The ioBroker Admin UI can install GitHub adapters from a URL, but it cannot pass
+an explicit adapter name. That only works automatically if the GitHub repository
+is named like the adapter package, for example:
 
 ```text
-https://github.com/dude2k/Fairland_Adapter/archive/refs/heads/main.tar.gz
+https://github.com/dude2k/ioBroker.fairland
 ```
 
-In ioBroker Admin, open the adapter installation view, choose installation from
-a custom URL/GitHub repository, and use the URL above. Then create an instance
-of the `fairland` adapter.
+If this repository is still named `Fairland_Adapter`, use the CLI command below
+so ioBroker receives the adapter name `fairland` explicitly.
 
-CLI example:
+### CLI
+
+The most reliable installation URL for ioBroker containers is the GitHub archive
+URL because it does not require an SSH client inside the container:
 
 ```bash
 iobroker url https://github.com/dude2k/Fairland_Adapter/archive/refs/heads/main.tar.gz fairland
@@ -45,6 +53,9 @@ The explicit adapter name `fairland` is important as long as this repository is
 named `Fairland_Adapter`. Without it, ioBroker derives the adapter directory
 from the repository name and looks for the wrong folder after npm has installed
 the package.
+
+After installation, create an instance of the `fairland` adapter manually if
+ioBroker does not create one automatically.
 
 For local development:
 
@@ -159,3 +170,18 @@ https://github.com/siedi/ha-fairland
 
 The original project license notice is preserved in `LICENSE`, and additional
 third-party notices are listed in `THIRD_PARTY_NOTICES.md`.
+
+## Changelog
+
+### 0.1.1
+
+- Fixed ioBroker package schema for GitHub installation.
+- Added upstream license attribution and third-party notices.
+
+### 0.1.0
+
+- Initial ioBroker port of the Fairland iGarden integration.
+
+## License
+
+MIT. See `LICENSE` for details.
