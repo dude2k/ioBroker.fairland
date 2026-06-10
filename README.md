@@ -25,16 +25,15 @@ Install it from GitHub as a custom adapter.
 
 ### ioBroker Admin UI
 
-The ioBroker Admin UI can install GitHub adapters from a URL, but it cannot pass
-an explicit adapter name. That only works automatically if the GitHub repository
-is named like the adapter package, for example:
+In ioBroker Admin, open adapter installation, choose installation from a custom
+URL/GitHub repository, and use:
 
 ```text
 https://github.com/dude2k/ioBroker.fairland
 ```
 
-If this repository is still named `Fairland_Adapter`, use the CLI command below
-so ioBroker receives the adapter name `fairland` explicitly.
+After installation, create an instance of the `fairland` adapter manually if
+ioBroker does not create one automatically.
 
 ### CLI
 
@@ -42,20 +41,12 @@ The most reliable installation URL for ioBroker containers is the GitHub archive
 URL because it does not require an SSH client inside the container:
 
 ```bash
-iobroker url https://github.com/dude2k/Fairland_Adapter/archive/refs/heads/main.tar.gz fairland
+iobroker url https://github.com/dude2k/ioBroker.fairland/archive/refs/heads/main.tar.gz
 ```
 
-If you install with `https://github.com/dude2k/Fairland_Adapter`, some npm
+If you install with a GitHub shorthand, some npm
 versions convert the GitHub shorthand to an SSH URL. In minimal ioBroker
 containers this can fail with `ssh: not found`.
-
-The explicit adapter name `fairland` is important as long as this repository is
-named `Fairland_Adapter`. Without it, ioBroker derives the adapter directory
-from the repository name and looks for the wrong folder after npm has installed
-the package.
-
-After installation, create an instance of the `fairland` adapter manually if
-ioBroker does not create one automatically.
 
 For local development:
 

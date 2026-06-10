@@ -4,13 +4,13 @@
   "description": "ioBroker adapter for Fairland iGarden pool heat pumps and pool pumps",
   "author": "dude2k",
   "license": "MIT",
-  "homepage": "https://github.com/dude2k/Fairland_Adapter",
+  "homepage": "https://github.com/dude2k/ioBroker.fairland",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dude2k/Fairland_Adapter.git"
+    "url": "git+https://github.com/dude2k/ioBroker.fairland.git"
   },
   "bugs": {
-    "url": "https://github.com/dude2k/Fairland_Adapter/issues"
+    "url": "https://github.com/dude2k/ioBroker.fairland/issues"
   },
   "main": "build/main.js",
   "engines": {

@@ -24,7 +24,7 @@
       "config": "json"
     },
     "loglevel": "info",
-    "readme": "https://github.com/dude2k/Fairland_Adapter/blob/main/README.md",
+    "readme": "https://github.com/dude2k/ioBroker.fairland/blob/main/README.md",
     "news": {
       "0.1.1": {
         "en": "Fix ioBroker package schema for GitHub installation.",
