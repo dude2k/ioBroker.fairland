@@ -13,7 +13,6 @@
     "authors": ["dude2k"],
     "keywords": ["fairland", "igarden", "pool", "heat pump", "pump", "madimack"],
     "platform": "Javascript/Node.js",
-    "main": "build/main.js",
     "enabled": true,
     "mode": "daemon",
     "type": "iot-systems",

@@ -175,4 +175,9 @@ third-party notices are listed in `THIRD_PARTY_NOTICES.md`.
 
 ## License
 
-MIT. See `LICENSE` for details.
+MIT.
+
+Copyright (c) 2026 dude2k.
+Portions derived from ha-fairland: Copyright (c) 2025 @siedi.
+
+See `LICENSE` for details.
