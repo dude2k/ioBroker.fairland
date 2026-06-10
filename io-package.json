@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "fairland",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "titleLang": {
       "en": "Fairland (iGarden)",
       "de": "Fairland (iGarden)"
@@ -12,7 +12,6 @@
     },
     "authors": ["dude2k"],
     "keywords": ["fairland", "igarden", "pool", "heat pump", "pump", "madimack"],
-    "license": "MIT",
     "platform": "Javascript/Node.js",
     "main": "build/main.js",
     "enabled": true,
@@ -27,6 +26,10 @@
     "loglevel": "info",
     "readme": "https://github.com/dude2k/Fairland_Adapter/blob/main/README.md",
     "news": {
+      "0.1.1": {
+        "en": "Fix ioBroker package schema for GitHub installation.",
+        "de": "Korrigiert das ioBroker-Paketschema fuer die GitHub-Installation."
+      },
       "0.1.0": {
         "en": "Initial ioBroker port of the Fairland iGarden integration.",
         "de": "Erster ioBroker-Port der Fairland-iGarden-Integration."
@@ -34,12 +37,22 @@
     },
     "dependencies": [
       {
-        "js-controller": ">=5.0.0"
+        "js-controller": ">=6.0.11"
       }
     ],
-    "encryptedNative": ["password"],
+    "globalDependencies": [
+      {
+        "admin": ">=7.6.20"
+      }
+    ],
+    "licenseInformation": {
+      "type": "free",
+      "license": "MIT"
+    },
     "tier": 3
   },
+  "protectedNative": ["password"],
+  "encryptedNative": ["password"],
   "native": {
     "accountName": "",
     "password": "",
