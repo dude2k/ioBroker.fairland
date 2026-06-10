@@ -17,15 +17,26 @@ Unknown categories are logged and skipped.
 
 ## Installation
 
-The adapter can be installed from GitHub once this repository has been pushed:
+The most reliable installation URL for ioBroker containers is the GitHub archive
+URL because it does not require an SSH client inside the container:
 
 ```text
-https://github.com/dude2k/Fairland_Adapter.git
+https://github.com/dude2k/Fairland_Adapter/archive/refs/heads/main.tar.gz
 ```
 
 In ioBroker Admin, open the adapter installation view, choose installation from
 a custom URL/GitHub repository, and use the URL above. Then create an instance
 of the `fairland` adapter.
+
+CLI example:
+
+```bash
+iobroker url https://github.com/dude2k/Fairland_Adapter/archive/refs/heads/main.tar.gz
+```
+
+If you install with `https://github.com/dude2k/Fairland_Adapter`, some npm
+versions convert the GitHub shorthand to an SSH URL. In minimal ioBroker
+containers this can fail with `ssh: not found`.
 
 For local development:
 

@@ -27,7 +27,6 @@
     "build": "tsc -p tsconfig.json",
     "watch": "tsc -w -p tsconfig.json",
     "test": "npm run build",
-    "prepare": "npm run build",
     "prepack": "npm run build"
   },
   "dependencies": {
