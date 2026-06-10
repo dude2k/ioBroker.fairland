@@ -165,8 +165,8 @@ export const HEAT_PUMP_SENSOR_DEFINITIONS: DpStateDefinition[] = [
     id: "diagnostic.powerDisplayStatus",
     dpId: HEAT_PUMP_ACTION_DP_ID,
     name: "Power display status",
-    role: "value",
-    type: "number",
+    role: "indicator",
+    type: "boolean",
   },
   {
     id: "diagnostic.refrigerationFunction",

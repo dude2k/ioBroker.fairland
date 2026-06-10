@@ -159,8 +159,8 @@ exports.HEAT_PUMP_SENSOR_DEFINITIONS = [
         id: "diagnostic.powerDisplayStatus",
         dpId: exports.HEAT_PUMP_ACTION_DP_ID,
         name: "Power display status",
-        role: "value",
-        type: "number",
+        role: "indicator",
+        type: "boolean",
     },
     {
         id: "diagnostic.refrigerationFunction",

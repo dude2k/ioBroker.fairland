@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "fairland",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "titleLang": {
       "en": "Fairland (iGarden)",
       "de": "Fairland (iGarden)"
@@ -25,6 +25,10 @@
     "loglevel": "info",
     "readme": "https://github.com/dude2k/ioBroker.fairland/blob/main/README.md",
     "news": {
+      "0.1.2": {
+        "en": "Fix power display diagnostic state type.",
+        "de": "Korrigiert den Typ des Power-Display-Diagnosewerts."
+      },
       "0.1.1": {
         "en": "Fix ioBroker package schema for GitHub installation.",
         "de": "Korrigiert das ioBroker-Paketschema fuer die GitHub-Installation."
