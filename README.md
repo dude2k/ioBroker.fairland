@@ -164,6 +164,10 @@ third-party notices are listed in `THIRD_PARTY_NOTICES.md`.
 
 ## Changelog
 
+### 0.1.2
+
+- Fixed `diagnostic.powerDisplayStatus` state type for boolean Fairland API values.
+
 ### 0.1.1
 
 - Fixed ioBroker package schema for GitHub installation.
