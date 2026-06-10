@@ -34,12 +34,17 @@ of the `fairland` adapter.
 CLI example:
 
 ```bash
-iobroker url https://github.com/dude2k/Fairland_Adapter/archive/refs/heads/main.tar.gz
+iobroker url https://github.com/dude2k/Fairland_Adapter/archive/refs/heads/main.tar.gz fairland
 ```
 
 If you install with `https://github.com/dude2k/Fairland_Adapter`, some npm
 versions convert the GitHub shorthand to an SSH URL. In minimal ioBroker
 containers this can fail with `ssh: not found`.
+
+The explicit adapter name `fairland` is important as long as this repository is
+named `Fairland_Adapter`. Without it, ioBroker derives the adapter directory
+from the repository name and looks for the wrong folder after npm has installed
+the package.
 
 For local development:
 
