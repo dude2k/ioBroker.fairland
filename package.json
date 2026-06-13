@@ -43,7 +43,7 @@
     "@iobroker/adapter-core": "^3.2.3"
   },
   "devDependencies": {
-    "@types/node": "^24.0.0",
+    "@types/node": "^20.19.43",
     "typescript": "^5.9.3"
   }
 }
