@@ -55,19 +55,19 @@ class FairlandAdapter extends utils.Adapter {
     constructor(options = {}) {
         super({
             ...options,
-            name: "fairland",
+            name: 'fairland',
         });
-        this.on("ready", this.onReady.bind(this));
-        this.on("stateChange", this.onStateChange.bind(this));
-        this.on("unload", this.onUnload.bind(this));
+        this.on('ready', this.onReady.bind(this));
+        this.on('stateChange', this.onStateChange.bind(this));
+        this.on('unload', this.onUnload.bind(this));
     }
     async onReady() {
         const config = this.config;
-        const username = String(config.accountName ?? "").trim();
-        const password = String(config.password ?? "");
+        const username = String(config.accountName ?? '').trim();
+        const password = String(config.password ?? '');
         await this.setConnectionState(false);
         if (!username || !password) {
-            this.log.warn("Please configure your iGarden account e-mail and password.");
+            this.log.warn('Please configure your iGarden account e-mail and password.');
             return;
         }
         const scanIntervalSeconds = this.getScanIntervalSeconds(config);
@@ -78,17 +78,17 @@ class FairlandAdapter extends utils.Adapter {
         try {
             const region = await this.apiClient.detectRegion();
             this.log.info(`Connected to Fairland iGarden API region '${region}'.`);
-            await this.setStateAsync("info.region", { val: region, ack: true });
+            await this.setStateAsync('info.region', { val: region, ack: true });
             const courtyards = await this.apiClient.getCourtyards();
-            this.courtyardId = this.selectCourtyard(courtyards, String(config.courtyardId ?? "").trim());
-            await this.setStateAsync("info.courtyard", { val: this.courtyardId, ack: true });
-            await this.extendObjectAsync("devices", {
-                type: "channel",
-                common: { name: "Devices" },
+            this.courtyardId = this.selectCourtyard(courtyards, String(config.courtyardId ?? '').trim());
+            await this.setStateAsync('info.courtyard', { val: this.courtyardId, ack: true });
+            await this.extendObjectAsync('devices', {
+                type: 'channel',
+                common: { name: 'Devices' },
                 native: {},
             });
-            this.ensuredObjects.add("devices");
-            this.subscribeStates("devices.*");
+            this.ensuredObjects.add('devices');
+            this.subscribeStates('devices.*');
             await this.pollDevices();
             this.pollTimer = this.setInterval(() => void this.pollDevices(), scanIntervalSeconds * 1000);
             this.log.info(`Polling Fairland devices every ${scanIntervalSeconds} seconds.`);
@@ -129,7 +129,7 @@ class FairlandAdapter extends utils.Adapter {
             this.writeRefreshTimer = undefined;
         }
         void this.setConnectionState(false)
-            .catch((error) => this.log.debug(`Failed to update connection state on unload: ${error}`))
+            .catch(error => this.log.debug(`Failed to update connection state on unload: ${error}`))
             .finally(callback);
     }
     async pollDevices() {
@@ -175,23 +175,23 @@ class FairlandAdapter extends utils.Adapter {
         const deviceBase = this.deviceBase(device);
         await this.ensureDevice(deviceBase, device);
         await this.ensureState(`${deviceBase}.info.name`, {
-            name: "Device name",
-            type: "string",
-            role: "text",
+            name: 'Device name',
+            type: 'string',
+            role: 'text',
             read: true,
             write: false,
         });
         await this.ensureState(`${deviceBase}.info.category`, {
-            name: "Device category",
-            type: "string",
-            role: "text",
+            name: 'Device category',
+            type: 'string',
+            role: 'text',
             read: true,
             write: false,
         });
         await this.ensureState(`${deviceBase}.info.version`, {
-            name: "Firmware version",
-            type: "string",
-            role: "text",
+            name: 'Firmware version',
+            type: 'string',
+            role: 'text',
             read: true,
             write: false,
         });
@@ -215,18 +215,18 @@ class FairlandAdapter extends utils.Adapter {
         if (powerDp) {
             const stateId = `${deviceBase}.power`;
             await this.ensureState(stateId, {
-                name: "Power",
-                type: "boolean",
-                role: "switch",
+                name: 'Power',
+                type: 'boolean',
+                role: 'switch',
                 read: true,
-                write: powerDp.dpMode === "rw",
+                write: powerDp.dpMode === 'rw',
             });
-            if (powerDp.dpMode === "rw") {
+            if (powerDp.dpMode === 'rw') {
                 this.writableStates.set(stateId, {
                     deviceId: device.id,
                     dpId: mappings_1.HEAT_PUMP_POWER_DP_ID,
-                    kind: "heatPower",
-                    valueType: "boolean",
+                    kind: 'heatPower',
+                    valueType: 'boolean',
                 });
             }
         }
@@ -234,20 +234,20 @@ class FairlandAdapter extends utils.Adapter {
         if (modeDp) {
             const stateId = `${deviceBase}.mode`;
             await this.ensureState(stateId, {
-                name: "Mode",
-                type: "string",
-                role: "level.mode",
+                name: 'Mode',
+                type: 'string',
+                role: 'level.mode',
                 read: true,
-                write: modeDp.dpMode === "rw",
+                write: modeDp.dpMode === 'rw',
                 states: mappings_1.HEAT_HVAC_MODE_STATES,
             });
-            if (modeDp.dpMode === "rw") {
+            if (modeDp.dpMode === 'rw') {
                 this.writableStates.set(stateId, {
                     deviceId: device.id,
                     dpId: mappings_1.HEAT_PUMP_HVAC_MODE_DP_ID,
-                    kind: "heatHvacMode",
+                    kind: 'heatHvacMode',
                     optionToRaw: (0, dpUtils_1.invertEnum)(mappings_1.HEAT_HVAC_MODES),
-                    valueType: "string",
+                    valueType: 'string',
                 });
             }
         }
@@ -256,23 +256,23 @@ class FairlandAdapter extends utils.Adapter {
             const scale = (0, dpUtils_1.getDpScale)(targetDp, 0);
             const stateId = `${deviceBase}.temperature.target`;
             await this.ensureState(stateId, {
-                name: "Target temperature",
-                type: "number",
-                role: "level.temperature",
-                unit: "°C",
+                name: 'Target temperature',
+                type: 'number',
+                role: 'level.temperature',
+                unit: '°C',
                 read: true,
-                write: targetDp.dpMode === "rw",
+                write: targetDp.dpMode === 'rw',
                 min: 8,
                 max: 40,
                 step: 1,
             });
-            if (targetDp.dpMode === "rw") {
+            if (targetDp.dpMode === 'rw') {
                 this.writableStates.set(stateId, {
                     deviceId: device.id,
                     dpId: mappings_1.HEAT_PUMP_TARGET_TEMP_DP_ID,
-                    kind: "heatTargetTemperature",
+                    kind: 'heatTargetTemperature',
                     scale,
-                    valueType: "number",
+                    valueType: 'number',
                 });
             }
         }
@@ -281,34 +281,34 @@ class FairlandAdapter extends utils.Adapter {
             const options = this.parseHeatPresetOptions(presetDp);
             const stateId = `${deviceBase}.presetMode`;
             await this.ensureState(stateId, {
-                name: "Preset mode",
-                type: "string",
-                role: "level.mode",
+                name: 'Preset mode',
+                type: 'string',
+                role: 'level.mode',
                 read: true,
-                write: presetDp.dpMode === "rw",
+                write: presetDp.dpMode === 'rw',
                 states: (0, dpUtils_1.toStatesObject)(options),
             });
-            if (presetDp.dpMode === "rw") {
+            if (presetDp.dpMode === 'rw') {
                 this.writableStates.set(stateId, {
                     deviceId: device.id,
                     dpId: mappings_1.HEAT_PUMP_PRESET_DP_ID,
-                    kind: "heatPresetMode",
+                    kind: 'heatPresetMode',
                     optionToRaw: (0, dpUtils_1.invertEnum)(options),
-                    valueType: "string",
+                    valueType: 'string',
                 });
             }
         }
         await this.ensureState(`${deviceBase}.hvac.action`, {
-            name: "HVAC action",
-            type: "string",
-            role: "state",
+            name: 'HVAC action',
+            type: 'string',
+            role: 'state',
             read: true,
             write: false,
             states: {
-                off: "Off",
-                idle: "Idle",
-                heating: "Heating",
-                cooling: "Cooling",
+                off: 'Off',
+                idle: 'Idle',
+                heating: 'Heating',
+                cooling: 'Cooling',
             },
         });
         for (const definition of mappings_1.HEAT_PUMP_SENSOR_DEFINITIONS) {
@@ -324,18 +324,18 @@ class FairlandAdapter extends utils.Adapter {
         if (powerDp) {
             const stateId = `${deviceBase}.power`;
             await this.ensureState(stateId, {
-                name: "Power",
-                type: "boolean",
-                role: "switch",
+                name: 'Power',
+                type: 'boolean',
+                role: 'switch',
                 read: true,
-                write: powerDp.dpMode === "rw",
+                write: powerDp.dpMode === 'rw',
             });
-            if (powerDp.dpMode === "rw") {
+            if (powerDp.dpMode === 'rw') {
                 this.writableStates.set(stateId, {
                     deviceId: device.id,
                     dpId: mappings_1.WATER_PUMP_POWER_DP_ID,
-                    kind: "waterPower",
-                    valueType: "boolean",
+                    kind: 'waterPower',
+                    valueType: 'boolean',
                 });
             }
         }
@@ -344,20 +344,20 @@ class FairlandAdapter extends utils.Adapter {
             const options = (0, dpUtils_1.parseEnumOptions)(modeDp, mappings_1.WATER_PUMP_MODE_FALLBACK, mappings_1.WATER_PUMP_MODE_LABEL_TO_OPTION);
             const stateId = `${deviceBase}.mode`;
             await this.ensureState(stateId, {
-                name: "Mode",
-                type: "string",
-                role: "level.mode",
+                name: 'Mode',
+                type: 'string',
+                role: 'level.mode',
                 read: true,
-                write: modeDp.dpMode === "rw",
+                write: modeDp.dpMode === 'rw',
                 states: (0, dpUtils_1.toStatesObject)(options),
             });
-            if (modeDp.dpMode === "rw") {
+            if (modeDp.dpMode === 'rw') {
                 this.writableStates.set(stateId, {
                     deviceId: device.id,
                     dpId: mappings_1.WATER_PUMP_MODE_DP_ID,
-                    kind: "waterPumpMode",
+                    kind: 'waterPumpMode',
                     optionToRaw: (0, dpUtils_1.invertEnum)(options),
-                    valueType: "string",
+                    valueType: 'string',
                 });
             }
         }
@@ -373,7 +373,7 @@ class FairlandAdapter extends utils.Adapter {
         if (!dp || (definition.requireValue && dp.dpValue === null)) {
             return;
         }
-        if (writableDefinition && dp.dpMode !== "rw") {
+        if (writableDefinition && dp.dpMode !== 'rw') {
             return;
         }
         const applied = (0, dpUtils_1.applyDpProperty)(definition, dp);
@@ -394,7 +394,7 @@ class FairlandAdapter extends utils.Adapter {
             this.writableStates.set(stateId, {
                 deviceId: device.id,
                 dpId: applied.dpId,
-                kind: "direct",
+                kind: 'direct',
                 scale: applied.scale,
                 valueType: applied.type,
             });
@@ -404,11 +404,11 @@ class FairlandAdapter extends utils.Adapter {
         for (const dp of dpMap.values()) {
             const stateId = `${this.deviceBase(device)}.raw.dp_${(0, dpUtils_1.sanitizeObjectId)(dp.dpId)}`;
             const type = (0, dpUtils_1.inferStateType)(dp.dpValue);
-            const writable = dp.dpMode === "rw";
+            const writable = dp.dpMode === 'rw';
             await this.ensureState(stateId, {
-                name: `Raw dp ${dp.dpId}${dp.dpName ? ` (${dp.dpName})` : ""}`,
+                name: `Raw dp ${dp.dpId}${dp.dpName ? ` (${dp.dpName})` : ''}`,
                 type,
-                role: "state",
+                role: 'state',
                 read: true,
                 write: writable,
             });
@@ -416,7 +416,7 @@ class FairlandAdapter extends utils.Adapter {
                 this.writableStates.set(stateId, {
                     deviceId: device.id,
                     dpId: dp.dpId,
-                    kind: "raw",
+                    kind: 'raw',
                     valueType: type,
                 });
             }
@@ -426,8 +426,8 @@ class FairlandAdapter extends utils.Adapter {
         const deviceBase = this.deviceBase(device);
         const dpMap = this.dpMap(device);
         await this.setStateAsync(`${deviceBase}.info.name`, { val: device.deviceName ?? device.id, ack: true });
-        await this.setStateAsync(`${deviceBase}.info.category`, { val: device.categoryCode ?? "", ack: true });
-        await this.setStateAsync(`${deviceBase}.info.version`, { val: device.version ?? "", ack: true });
+        await this.setStateAsync(`${deviceBase}.info.category`, { val: device.categoryCode ?? '', ack: true });
+        await this.setStateAsync(`${deviceBase}.info.version`, { val: device.version ?? '', ack: true });
         if (device.categoryCode === mappings_1.HEAT_PUMP_CATEGORY_CODE) {
             await this.updateHeatPumpStates(device, dpMap);
         }
@@ -447,7 +447,7 @@ class FairlandAdapter extends utils.Adapter {
         }
         if (dpMap.has(mappings_1.HEAT_PUMP_HVAC_MODE_DP_ID)) {
             const modeRaw = this.dpValue(device.id, dpMap, mappings_1.HEAT_PUMP_HVAC_MODE_DP_ID);
-            const mode = isOn ? mappings_1.HEAT_HVAC_MODES[Number(modeRaw)] ?? "off" : "off";
+            const mode = isOn ? (mappings_1.HEAT_HVAC_MODES[Number(modeRaw)] ?? 'off') : 'off';
             await this.setStateAsync(`${deviceBase}.mode`, { val: mode, ack: true });
         }
         const targetDp = dpMap.get(mappings_1.HEAT_PUMP_TARGET_TEMP_DP_ID);
@@ -507,7 +507,7 @@ class FairlandAdapter extends utils.Adapter {
         if (!dp || (definition.requireValue && dp.dpValue === null)) {
             return;
         }
-        if (writableDefinition && dp.dpMode !== "rw") {
+        if (writableDefinition && dp.dpMode !== 'rw') {
             return;
         }
         const applied = (0, dpUtils_1.applyDpProperty)(definition, dp);
@@ -531,18 +531,16 @@ class FairlandAdapter extends utils.Adapter {
         if (!this.apiClient) {
             return;
         }
-        if (mapping.kind === "heatHvacMode") {
+        if (mapping.kind === 'heatHvacMode') {
             await this.writeHeatHvacMode(localId, mapping, value);
             return;
         }
-        if (mapping.kind === "heatPresetMode" || mapping.kind === "waterPumpMode") {
+        if (mapping.kind === 'heatPresetMode' || mapping.kind === 'waterPumpMode') {
             await this.writeMappedMode(localId, mapping, value);
             return;
         }
         const coerced = (0, dpUtils_1.coerceStateValue)(value, mapping.valueType);
-        const rawValue = mapping.kind === "heatTargetTemperature"
-            ? (0, dpUtils_1.scaleWrite)(coerced, mapping.scale ?? 0)
-            : coerced;
+        const rawValue = mapping.kind === 'heatTargetTemperature' ? (0, dpUtils_1.scaleWrite)(coerced, mapping.scale ?? 0) : coerced;
         await this.apiClient.setDeviceStatus(mapping.deviceId, mapping.dpId, rawValue);
         this.notePendingWrite(mapping.deviceId, mapping.dpId, rawValue);
         await this.setStateAsync(localId, { val: coerced, ack: true });
@@ -554,10 +552,10 @@ class FairlandAdapter extends utils.Adapter {
         }
         const mode = String(value);
         const deviceBase = this.deviceObjectIds.get(mapping.deviceId);
-        if (mode === "off") {
+        if (mode === 'off') {
             await this.apiClient.setDeviceStatus(mapping.deviceId, mappings_1.HEAT_PUMP_POWER_DP_ID, false);
             this.notePendingWrite(mapping.deviceId, mappings_1.HEAT_PUMP_POWER_DP_ID, false);
-            await this.setStateAsync(localId, { val: "off", ack: true });
+            await this.setStateAsync(localId, { val: 'off', ack: true });
             if (deviceBase) {
                 await this.setStateAsync(`${deviceBase}.power`, { val: false, ack: true });
             }
@@ -596,20 +594,20 @@ class FairlandAdapter extends utils.Adapter {
     }
     heatPumpAction(deviceId, dpMap, isOn) {
         if (!isOn) {
-            return "off";
+            return 'off';
         }
         const action = this.dpValue(deviceId, dpMap, mappings_1.HEAT_PUMP_ACTION_DP_ID);
         const mode = this.dpValue(deviceId, dpMap, mappings_1.HEAT_PUMP_HVAC_MODE_DP_ID);
         if (Number(action) !== 1) {
-            return "idle";
+            return 'idle';
         }
         if (Number(mode) === 1) {
-            return "heating";
+            return 'heating';
         }
         if (Number(mode) === 2) {
-            return "cooling";
+            return 'cooling';
         }
-        return "idle";
+        return 'idle';
     }
     dpValue(deviceId, dpMap, dpId) {
         const dp = dpMap.get(dpId);
@@ -648,12 +646,12 @@ class FairlandAdapter extends utils.Adapter {
             return configuredCourtyardId;
         }
         if (courtyards.length === 0) {
-            throw new fairlandApi_1.FairlandApiClientError("No courtyards found for this account.");
+            throw new fairlandApi_1.FairlandApiClientError('No courtyards found for this account.');
         }
         if (courtyards.length > 1) {
             this.log.warn(`Multiple courtyards found. Using '${courtyards[0].name}' (${courtyards[0].id}). Available: ${courtyards
-                .map((courtyard) => `${courtyard.name}=${courtyard.id}`)
-                .join(", ")}`);
+                .map(courtyard => `${courtyard.name}=${courtyard.id}`)
+                .join(', ')}`);
         }
         return courtyards[0].id;
     }
@@ -668,7 +666,7 @@ class FairlandAdapter extends utils.Adapter {
         return Math.max(MIN_SCAN_INTERVAL_SECONDS, Math.round(parsed));
     }
     dpMap(device) {
-        return new Map((device.dps ?? []).map((dp) => [String(dp.dpId), { ...dp, dpId: String(dp.dpId) }]));
+        return new Map((device.dps ?? []).map(dp => [String(dp.dpId), { ...dp, dpId: String(dp.dpId) }]));
     }
     deviceBase(device) {
         let objectId = this.deviceObjectIds.get(device.id);
@@ -683,7 +681,7 @@ class FairlandAdapter extends utils.Adapter {
             return;
         }
         await this.extendObjectAsync(deviceBase, {
-            type: "device",
+            type: 'device',
             common: {
                 name: device.deviceName ?? device.id,
             },
@@ -698,25 +696,25 @@ class FairlandAdapter extends utils.Adapter {
     async ensureState(stateId, common, native = {}) {
         await this.ensureParentChannels(stateId);
         await this.extendObjectAsync(stateId, {
-            type: "state",
+            type: 'state',
             common,
             native,
         });
         this.ensuredObjects.add(stateId);
     }
     async ensureParentChannels(stateId) {
-        const parts = stateId.split(".");
-        let current = "";
+        const parts = stateId.split('.');
+        let current = '';
         for (let index = 0; index < parts.length - 1; index += 1) {
             current = current ? `${current}.${parts[index]}` : parts[index];
             if (this.ensuredObjects.has(current)) {
                 continue;
             }
-            if (index === 1 && parts[0] === "devices") {
+            if (index === 1 && parts[0] === 'devices') {
                 continue;
             }
             await this.extendObjectAsync(current, {
-                type: "channel",
+                type: 'channel',
                 common: {
                     name: this.channelName(parts[index]),
                 },
@@ -727,9 +725,9 @@ class FairlandAdapter extends utils.Adapter {
     }
     channelName(part) {
         return part
-            .replace(/([a-z])([A-Z])/g, "$1 $2")
-            .replace(/[_-]+/g, " ")
-            .replace(/\b\w/g, (match) => match.toUpperCase());
+            .replace(/([a-z])([A-Z])/g, '$1 $2')
+            .replace(/[_-]+/g, ' ')
+            .replace(/\b\w/g, match => match.toUpperCase());
     }
     pendingKey(deviceId, dpId) {
         return `${deviceId}:${dpId}`;
@@ -739,7 +737,7 @@ class FairlandAdapter extends utils.Adapter {
         return id.startsWith(prefix) ? id.slice(prefix.length) : id;
     }
     async setConnectionState(connected) {
-        await this.setStateAsync("info.connection", { val: connected, ack: true });
+        await this.setStateAsync('info.connection', { val: connected, ack: true });
     }
     errorMessage(error) {
         if (error instanceof fairlandApi_1.FairlandApiClientAuthenticationError ||

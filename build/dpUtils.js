@@ -14,11 +14,11 @@ exports.inferStateType = inferStateType;
 exports.coerceStateValue = coerceStateValue;
 exports.valuesMatch = valuesMatch;
 const TIME_UNIT_MAP = {
-    s: "s",
-    min: "min",
+    s: 's',
+    min: 'min',
 };
 function parseDpProperty(dp) {
-    if (typeof dp.dpProperty !== "string" || dp.dpProperty.trim() === "") {
+    if (typeof dp.dpProperty !== 'string' || dp.dpProperty.trim() === '') {
         return {};
     }
     try {
@@ -32,10 +32,10 @@ function parseDpProperty(dp) {
 function getDpScale(dp, fallback = 0) {
     const prop = parseDpProperty(dp);
     const scale = prop.scale;
-    if (typeof scale === "number" && Number.isFinite(scale)) {
+    if (typeof scale === 'number' && Number.isFinite(scale)) {
         return scale;
     }
-    if (typeof scale === "string" && scale.trim() !== "") {
+    if (typeof scale === 'string' && scale.trim() !== '') {
         const parsed = Number(scale);
         return Number.isFinite(parsed) ? parsed : fallback;
     }
@@ -45,7 +45,7 @@ function scaleRead(value, scale) {
     if (value === null || value === undefined) {
         return null;
     }
-    if (scale > 0 && typeof value === "number") {
+    if (scale > 0 && typeof value === 'number') {
         return value / 10 ** scale;
     }
     return toStateValue(value);
@@ -54,7 +54,7 @@ function scaleWrite(value, scale) {
     if (value === null || value === undefined) {
         return value;
     }
-    if (scale > 0 && typeof value === "number") {
+    if (scale > 0 && typeof value === 'number') {
         return Math.round(value * 10 ** scale);
     }
     return value;
@@ -85,7 +85,7 @@ function applyDpProperty(definition, dp) {
             }
         }
     }
-    if (definition.useDpTimeUnit && typeof prop.unit === "string" && TIME_UNIT_MAP[prop.unit]) {
+    if (definition.useDpTimeUnit && typeof prop.unit === 'string' && TIME_UNIT_MAP[prop.unit]) {
         next.unit = TIME_UNIT_MAP[prop.unit];
     }
     return next;
@@ -104,7 +104,7 @@ function parseEnumOptions(dp, fallback, labelToOption) {
     return Object.keys(options).length > 0 ? options : { ...fallback };
 }
 function toStatesObject(options) {
-    return Object.fromEntries(Object.values(options).map((option) => [option, humanize(option)]));
+    return Object.fromEntries(Object.values(options).map(option => [option, humanize(option)]));
 }
 function invertEnum(options) {
     return Object.fromEntries(Object.entries(options).map(([raw, option]) => [option, Number(raw)]));
@@ -112,47 +112,47 @@ function invertEnum(options) {
 function sanitizeObjectId(value) {
     const sanitized = String(value)
         .trim()
-        .replace(/[.\s]+/g, "_")
-        .replace(/[^A-Za-z0-9_-]/g, "_")
-        .replace(/_+/g, "_")
-        .replace(/^_+|_+$/g, "");
-    return sanitized || "unknown";
+        .replace(/[.\s]+/g, '_')
+        .replace(/[^A-Za-z0-9_-]/g, '_')
+        .replace(/_+/g, '_')
+        .replace(/^_+|_+$/g, '');
+    return sanitized || 'unknown';
 }
 function toStateValue(value) {
     if (value === null || value === undefined) {
         return null;
     }
-    if (typeof value === "string" || typeof value === "number" || typeof value === "boolean") {
+    if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') {
         return value;
     }
     return JSON.stringify(value);
 }
 function inferStateType(value) {
-    if (typeof value === "boolean") {
-        return "boolean";
+    if (typeof value === 'boolean') {
+        return 'boolean';
     }
-    if (typeof value === "number") {
-        return "number";
+    if (typeof value === 'number') {
+        return 'number';
     }
-    if (typeof value === "string") {
-        return "string";
+    if (typeof value === 'string') {
+        return 'string';
     }
-    return "mixed";
+    return 'mixed';
 }
 function coerceStateValue(value, type) {
-    if (value === undefined || value === null || type === "mixed" || type === undefined) {
+    if (value === undefined || value === null || type === 'mixed' || type === undefined) {
         return value ?? null;
     }
-    if (type === "boolean") {
-        if (typeof value === "boolean") {
+    if (type === 'boolean') {
+        if (typeof value === 'boolean') {
             return value;
         }
-        if (typeof value === "number") {
+        if (typeof value === 'number') {
             return value !== 0;
         }
-        return ["true", "1", "on", "yes"].includes(value.toLowerCase());
+        return ['true', '1', 'on', 'yes'].includes(value.toLowerCase());
     }
-    if (type === "number") {
+    if (type === 'number') {
         const parsed = Number(value);
         return Number.isFinite(parsed) ? parsed : null;
     }
@@ -170,17 +170,17 @@ function slugify(value) {
     const slug = value
         .trim()
         .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "_")
-        .replace(/^_+|_+$/g, "");
-    return slug || "unknown";
+        .replace(/[^a-z0-9]+/g, '_')
+        .replace(/^_+|_+$/g, '');
+    return slug || 'unknown';
 }
 function humanize(value) {
     return value
-        .split("_")
+        .split('_')
         .filter(Boolean)
-        .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-        .join(" ");
+        .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+        .join(' ');
 }
 function isRecord(value) {
-    return typeof value === "object" && value !== null && !Array.isArray(value);
+    return typeof value === 'object' && value !== null && !Array.isArray(value);
 }
