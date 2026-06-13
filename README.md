@@ -152,6 +152,10 @@ third-party notices are listed in `THIRD_PARTY_NOTICES.md`.
 
 ## Changelog
 
+### 0.2.1
+
+- Skip the npm deploy job until npm publishing is explicitly enabled for the repository.
+
 ### 0.2.0
 
 - Added Dependabot update configuration and Dependabot auto-merge workflow.

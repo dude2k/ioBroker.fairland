@@ -44,7 +44,8 @@ jobs:
     if: |
       contains(github.event.head_commit.message, '[skip ci]') == false &&
       github.event_name == 'push' &&
-      startsWith(github.ref, 'refs/tags/v')
+      startsWith(github.ref, 'refs/tags/v') &&
+      vars.NPM_PUBLISH_ENABLED == 'true'
     needs: [check-and-lint, adapter-tests]
     runs-on: ubuntu-latest
 

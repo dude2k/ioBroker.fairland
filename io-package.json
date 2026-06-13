@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "fairland",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "titleLang": {
       "en": "Fairland (iGarden)",
       "de": "Fairland (iGarden)",
@@ -54,6 +54,19 @@
     "icon": "fairland.png",
     "extIcon": "https://raw.githubusercontent.com/dude2k/ioBroker.fairland/main/admin/fairland.png",
     "news": {
+      "0.2.1": {
+        "en": "Skip npm deployment until publishing is explicitly enabled for the repository.",
+        "de": "Ueberspringt das npm-Deployment, bis die Veroeffentlichung explizit fuer das Repository aktiviert ist.",
+        "ru": "Skip npm deployment until publishing is explicitly enabled for the repository.",
+        "pt": "Ignora o deploy npm ate que a publicacao seja ativada explicitamente para o repositorio.",
+        "nl": "Slaat npm-deployment over totdat publiceren expliciet voor de repository is ingeschakeld.",
+        "fr": "Ignore le deploiement npm tant que la publication n'est pas explicitement activee pour le depot.",
+        "it": "Salta il deployment npm finche la pubblicazione non e abilitata esplicitamente per il repository.",
+        "es": "Omite el despliegue npm hasta que la publicacion este habilitada explicitamente para el repositorio.",
+        "pl": "Pomija wdrozenie npm, dopoki publikowanie nie zostanie jawnie wlaczone dla repozytorium.",
+        "uk": "Skip npm deployment until publishing is explicitly enabled for the repository.",
+        "zh-cn": "Skip npm deployment until publishing is explicitly enabled for the repository."
+      },
       "0.2.0": {
         "en": "Add Dependabot configuration, Dependabot auto-merge, Node.js 22 TypeScript base configuration, and require Admin 7.8.23.",
         "de": "Fuegt Dependabot-Konfiguration, Dependabot-Auto-Merge und die Node.js-22-TypeScript-Basiskonfiguration hinzu und setzt Admin 7.8.23 voraus.",
@@ -131,19 +144,6 @@
         "pl": "Dodano ikone adaptera i uzupelniono tlumaczenia io-package.",
         "uk": "Додано значок адаптера та завершено переклади io-package.",
         "zh-cn": "添加适配器图标并完善 io-package 翻译。"
-      },
-      "0.1.3": {
-        "en": "Update package metadata for ioBroker repository checks.",
-        "de": "Aktualisiert Paket-Metadaten fuer ioBroker-Repository-Pruefungen.",
-        "ru": "Обновлены метаданные пакета для проверок репозитория ioBroker.",
-        "pt": "Atualiza os metadados do pacote para as verificacoes do repositorio ioBroker.",
-        "nl": "Pakketmetadata bijgewerkt voor ioBroker-repositorycontroles.",
-        "fr": "Met a jour les metadonnees du paquet pour les controles du depot ioBroker.",
-        "it": "Aggiorna i metadati del pacchetto per i controlli del repository ioBroker.",
-        "es": "Actualiza los metadatos del paquete para las comprobaciones del repositorio ioBroker.",
-        "pl": "Zaktualizowano metadane pakietu na potrzeby kontroli repozytorium ioBroker.",
-        "uk": "Оновлено метадані пакета для перевірок репозиторію ioBroker.",
-        "zh-cn": "更新软件包元数据以通过 ioBroker 仓库检查。"
       }
     },
     "dependencies": [
