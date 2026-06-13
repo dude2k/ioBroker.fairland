@@ -164,6 +164,10 @@ third-party notices are listed in `THIRD_PARTY_NOTICES.md`.
 
 ## Changelog
 
+
+### **WORK IN PROGRESS**
+- (ioBroker-Bot) Adapter requires admin >= 7.8.23 now.
+
 ### 0.1.2
 
 - Fixed `diagnostic.powerDisplayStatus` state type for boolean Fairland API values.
