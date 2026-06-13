@@ -152,6 +152,12 @@ third-party notices are listed in `THIRD_PARTY_NOTICES.md`.
 
 ## Changelog
 
+### 0.1.8
+
+- Updated TypeScript to 6.0.3.
+- Adjusted the TypeScript configuration for TypeScript 6.
+- Added `CHANGELOG_OLD.md` for older changelog entries.
+
 ### 0.1.7
 
 - Aligned Node.js type definitions with the supported Node.js 22 runtime.
@@ -190,6 +196,8 @@ third-party notices are listed in `THIRD_PARTY_NOTICES.md`.
 ### 0.1.0
 
 - Initial ioBroker port of the Fairland iGarden integration.
+
+Older changelog entries may be moved to [CHANGELOG_OLD.md](CHANGELOG_OLD.md).
 
 ## License
 

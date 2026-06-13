@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "fairland",
-    "version": "0.1.7",
+    "version": "0.1.8",
     "titleLang": {
       "en": "Fairland (iGarden)",
       "de": "Fairland (iGarden)",
@@ -54,6 +54,19 @@
     "icon": "fairland.png",
     "extIcon": "https://raw.githubusercontent.com/dude2k/ioBroker.fairland/main/admin/fairland.png",
     "news": {
+      "0.1.8": {
+        "en": "Update TypeScript to 6.0.3, adjust the TypeScript configuration, and add CHANGELOG_OLD.md.",
+        "de": "Aktualisiert TypeScript auf 6.0.3, passt die TypeScript-Konfiguration an und fuegt CHANGELOG_OLD.md hinzu.",
+        "ru": "Update TypeScript to 6.0.3, adjust the TypeScript configuration, and add CHANGELOG_OLD.md.",
+        "pt": "Atualiza TypeScript para 6.0.3, ajusta a configuracao do TypeScript e adiciona CHANGELOG_OLD.md.",
+        "nl": "Werkt TypeScript bij naar 6.0.3, past de TypeScript-configuratie aan en voegt CHANGELOG_OLD.md toe.",
+        "fr": "Met a jour TypeScript vers 6.0.3, ajuste la configuration TypeScript et ajoute CHANGELOG_OLD.md.",
+        "it": "Aggiorna TypeScript a 6.0.3, adegua la configurazione TypeScript e aggiunge CHANGELOG_OLD.md.",
+        "es": "Actualiza TypeScript a 6.0.3, ajusta la configuracion de TypeScript y anade CHANGELOG_OLD.md.",
+        "pl": "Aktualizuje TypeScript do 6.0.3, dostosowuje konfiguracje TypeScript i dodaje CHANGELOG_OLD.md.",
+        "uk": "Update TypeScript to 6.0.3, adjust the TypeScript configuration, and add CHANGELOG_OLD.md.",
+        "zh-cn": "Update TypeScript to 6.0.3, adjust the TypeScript configuration, and add CHANGELOG_OLD.md."
+      },
       "0.1.7": {
         "en": "Align Node.js type definitions with the supported Node.js 22 runtime.",
         "de": "Passt die Node.js-Typdefinitionen an die unterstuetzte Node.js-22-Laufzeit an.",
@@ -131,19 +144,6 @@
         "pl": "Poprawiono typ stanu diagnostycznego wyswietlania mocy.",
         "uk": "Виправлено тип діагностичного стану індикації живлення.",
         "zh-cn": "修正功率显示诊断状态的类型。"
-      },
-      "0.1.1": {
-        "en": "Fix ioBroker package schema for GitHub installation.",
-        "de": "Korrigiert das ioBroker-Paketschema fuer die GitHub-Installation.",
-        "ru": "Исправлена схема пакета ioBroker для установки из GitHub.",
-        "pt": "Corrige o esquema do pacote ioBroker para instalacao pelo GitHub.",
-        "nl": "ioBroker-pakketschema voor installatie via GitHub gecorrigeerd.",
-        "fr": "Corrige le schema du paquet ioBroker pour l'installation depuis GitHub.",
-        "it": "Corregge lo schema del pacchetto ioBroker per l'installazione da GitHub.",
-        "es": "Corrige el esquema del paquete ioBroker para la instalacion desde GitHub.",
-        "pl": "Poprawiono schemat pakietu ioBroker dla instalacji z GitHuba.",
-        "uk": "Виправлено схему пакета ioBroker для встановлення з GitHub.",
-        "zh-cn": "修正用于从 GitHub 安装的 ioBroker 软件包架构。"
       }
     },
     "dependencies": [

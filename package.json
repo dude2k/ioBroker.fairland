@@ -1,6 +1,6 @@
 {
   "name": "iobroker.fairland",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "ioBroker adapter for Fairland iGarden pool heat pumps and pool pumps",
   "keywords": [
     "ioBroker",
@@ -57,6 +57,6 @@
     "@iobroker/eslint-config": "^2.3.4",
     "@iobroker/testing": "^5.2.2",
     "@types/node": "^22.19.21",
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.3"
   }
 }
