@@ -152,6 +152,10 @@ third-party notices are listed in `THIRD_PARTY_NOTICES.md`.
 
 ## Changelog
 
+### 0.2.4
+
+- Optimized the adapter icon image size.
+
 ### 0.2.3
 
 - Converted admin i18n files to the short ioBroker format.

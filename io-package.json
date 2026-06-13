@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "fairland",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "titleLang": {
       "en": "Fairland (iGarden)",
       "de": "Fairland (iGarden)",
@@ -54,6 +54,19 @@
     "icon": "fairland.png",
     "extIcon": "https://raw.githubusercontent.com/dude2k/ioBroker.fairland/main/admin/fairland.png",
     "news": {
+      "0.2.4": {
+        "en": "Optimize the adapter icon image size.",
+        "de": "Optimiert die Bildgroesse des Adapter-Icons.",
+        "ru": "Optimize the adapter icon image size.",
+        "pt": "Otimiza o tamanho da imagem do icone do adaptador.",
+        "nl": "Optimaliseert de afbeeldingsgrootte van het adapterpictogram.",
+        "fr": "Optimise la taille de l image de l icone de l adaptateur.",
+        "it": "Ottimizza la dimensione dell immagine dell icona dell adattatore.",
+        "es": "Optimiza el tamano de imagen del icono del adaptador.",
+        "pl": "Optymalizuje rozmiar obrazu ikony adaptera.",
+        "uk": "Optimize the adapter icon image size.",
+        "zh-cn": "Optimize the adapter icon image size."
+      },
       "0.2.3": {
         "en": "Convert admin i18n files to short format, add VS Code schema settings, and add the release manual review plugin.",
         "de": "Konvertiert Admin-i18n-Dateien ins Kurzformat, fuegt VS-Code-Schema-Einstellungen hinzu und ergaenzt das Release-Manual-Review-Plugin.",
