@@ -211,13 +211,12 @@ export class FairlandApiClient {
     url: string,
     init: RequestInit,
   ): Promise<ApiResponse<T>> {
-    const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), this.timeoutMs);
+    const signal = AbortSignal.timeout(this.timeoutMs);
 
     try {
       const response = await fetch(url, {
         ...init,
-        signal: controller.signal,
+        signal,
       });
 
       if (response.status === 401 || response.status === 403) {
@@ -237,15 +236,13 @@ export class FairlandApiClient {
         throw error;
       }
 
-      if (error instanceof Error && error.name === "AbortError") {
+      if (error instanceof Error && (error.name === "AbortError" || error.name === "TimeoutError")) {
         throw new FairlandApiClientCommunicationError(`Timeout fetching ${url}`);
       }
 
       throw new FairlandApiClientCommunicationError(
         `Error fetching ${url}: ${String(error)}`,
       );
-    } finally {
-      clearTimeout(timer);
     }
   }
 

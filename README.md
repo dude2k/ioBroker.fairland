@@ -21,7 +21,7 @@ Home Assistant, ioBroker, or the upstream ha-fairland project maintainers.
 ## Installation
 
 This adapter is not published to npm or the official ioBroker repository yet.
-Install it from GitHub as a custom adapter.
+Installation instructions will be added after the adapter is published.
 
 ## Requirements
 
@@ -29,35 +29,9 @@ Install it from GitHub as a custom adapter.
 - ioBroker js-controller 6.0.11 or newer
 - ioBroker Admin 7.6.20 or newer
 
-### ioBroker Admin UI
-
-In ioBroker Admin, open adapter installation, choose installation from a custom
-URL/GitHub repository, and use:
-
-```text
-https://github.com/dude2k/ioBroker.fairland
-```
-
-After installation, create an instance of the `fairland` adapter manually if
-ioBroker does not create one automatically.
-
-### CLI
-
-The most reliable installation URL for ioBroker containers is the GitHub archive
-URL because it does not require an SSH client inside the container:
-
-```bash
-iobroker url https://github.com/dude2k/ioBroker.fairland/archive/refs/heads/main.tar.gz
-```
-
-If you install with a GitHub shorthand, some npm
-versions convert the GitHub shorthand to an SSH URL. In minimal ioBroker
-containers this can fail with `ssh: not found`.
-
 For local development:
 
 ```bash
-npm install
 npm run build
 ```
 
@@ -169,6 +143,12 @@ The original project license notice is preserved in `LICENSE`, and additional
 third-party notices are listed in `THIRD_PARTY_NOTICES.md`.
 
 ## Changelog
+
+### 0.1.5
+
+- Added the standard GitHub Actions test and release workflow.
+- Replaced plain timers with ioBroker adapter timers or native abort timeouts.
+- Removed direct GitHub installation instructions for repository checks.
 
 ### 0.1.4
 

@@ -59,8 +59,8 @@ const MIN_SCAN_INTERVAL_SECONDS = 10;
 class FairlandAdapter extends utils.Adapter {
   private apiClient: FairlandApiClient | undefined;
   private courtyardId: string | undefined;
-  private pollTimer: NodeJS.Timeout | undefined;
-  private writeRefreshTimer: NodeJS.Timeout | undefined;
+  private pollTimer: ioBroker.Interval | undefined;
+  private writeRefreshTimer: ioBroker.Timeout | undefined;
   private readonly pendingWrites = new Map<string, PendingWrite>();
   private readonly writableStates = new Map<string, WritableStateMapping>();
   private readonly ensuredObjects = new Set<string>();
@@ -116,7 +116,7 @@ class FairlandAdapter extends utils.Adapter {
 
       this.subscribeStates("devices.*");
       await this.pollDevices();
-      this.pollTimer = setInterval(() => void this.pollDevices(), scanIntervalSeconds * 1000);
+      this.pollTimer = this.setInterval(() => void this.pollDevices(), scanIntervalSeconds * 1000);
       this.log.info(`Polling Fairland devices every ${scanIntervalSeconds} seconds.`);
     } catch (error) {
       await this.setConnectionState(false);
@@ -151,11 +151,11 @@ class FairlandAdapter extends utils.Adapter {
     this.isUnloading = true;
 
     if (this.pollTimer) {
-      clearInterval(this.pollTimer);
+      this.clearInterval(this.pollTimer);
       this.pollTimer = undefined;
     }
     if (this.writeRefreshTimer) {
-      clearTimeout(this.writeRefreshTimer);
+      this.clearTimeout(this.writeRefreshTimer);
       this.writeRefreshTimer = undefined;
     }
 
@@ -786,9 +786,9 @@ class FairlandAdapter extends utils.Adapter {
 
   private scheduleWriteRefresh(): void {
     if (this.writeRefreshTimer) {
-      clearTimeout(this.writeRefreshTimer);
+      this.clearTimeout(this.writeRefreshTimer);
     }
-    this.writeRefreshTimer = setTimeout(() => {
+    this.writeRefreshTimer = this.setTimeout(() => {
       this.writeRefreshTimer = undefined;
       void this.pollDevices();
     }, WRITE_REFRESH_DELAY_MS);

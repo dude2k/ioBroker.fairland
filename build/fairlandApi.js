@@ -144,12 +144,11 @@ class FairlandApiClient {
         }
     }
     async fetchJson(url, init) {
-        const controller = new AbortController();
-        const timer = setTimeout(() => controller.abort(), this.timeoutMs);
+        const signal = AbortSignal.timeout(this.timeoutMs);
         try {
             const response = await fetch(url, {
                 ...init,
-                signal: controller.signal,
+                signal,
             });
             if (response.status === 401 || response.status === 403) {
                 throw new FairlandApiClientAuthenticationError("Invalid credentials");
@@ -164,13 +163,10 @@ class FairlandApiClient {
             if (error instanceof FairlandApiClientError) {
                 throw error;
             }
-            if (error instanceof Error && error.name === "AbortError") {
+            if (error instanceof Error && (error.name === "AbortError" || error.name === "TimeoutError")) {
                 throw new FairlandApiClientCommunicationError(`Timeout fetching ${url}`);
             }
             throw new FairlandApiClientCommunicationError(`Error fetching ${url}: ${String(error)}`);
-        }
-        finally {
-            clearTimeout(timer);
         }
     }
     publicHeaders() {

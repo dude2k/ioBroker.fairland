@@ -90,7 +90,7 @@ class FairlandAdapter extends utils.Adapter {
             this.ensuredObjects.add("devices");
             this.subscribeStates("devices.*");
             await this.pollDevices();
-            this.pollTimer = setInterval(() => void this.pollDevices(), scanIntervalSeconds * 1000);
+            this.pollTimer = this.setInterval(() => void this.pollDevices(), scanIntervalSeconds * 1000);
             this.log.info(`Polling Fairland devices every ${scanIntervalSeconds} seconds.`);
         }
         catch (error) {
@@ -121,11 +121,11 @@ class FairlandAdapter extends utils.Adapter {
     onUnload(callback) {
         this.isUnloading = true;
         if (this.pollTimer) {
-            clearInterval(this.pollTimer);
+            this.clearInterval(this.pollTimer);
             this.pollTimer = undefined;
         }
         if (this.writeRefreshTimer) {
-            clearTimeout(this.writeRefreshTimer);
+            this.clearTimeout(this.writeRefreshTimer);
             this.writeRefreshTimer = undefined;
         }
         void this.setConnectionState(false)
@@ -635,9 +635,9 @@ class FairlandAdapter extends utils.Adapter {
     }
     scheduleWriteRefresh() {
         if (this.writeRefreshTimer) {
-            clearTimeout(this.writeRefreshTimer);
+            this.clearTimeout(this.writeRefreshTimer);
         }
-        this.writeRefreshTimer = setTimeout(() => {
+        this.writeRefreshTimer = this.setTimeout(() => {
             this.writeRefreshTimer = undefined;
             void this.pollDevices();
         }, WRITE_REFRESH_DELAY_MS);
