@@ -1,9 +1,0 @@
-{
-  "iGarden account e-mail": "E-mail dell'account iGarden",
-  "iGarden password": "Password iGarden",
-  "Scan interval in seconds": "Intervallo di scansione in secondi",
-  "Courtyard ID (optional)": "ID cortile (opzionale)",
-  "Create raw dpId states": "Crea stati dpId grezzi",
-  "Leave empty to use the first courtyard returned by the iGarden cloud. If you have several courtyards, set the desired ID from the adapter log.": "Lasciare vuoto per usare il primo cortile restituito dal cloud iGarden. Se ci sono piu cortili, impostare l'ID desiderato dal log dell'adapter.",
-  "Creates raw states under devices.<device>.raw.dp_<id>. Writable raw states follow the cloud dpMode and are useful for diagnostics.": "Crea stati grezzi sotto devices.<device>.raw.dp_<id>. Gli stati grezzi scrivibili seguono il dpMode del cloud e sono utili per la diagnostica."
-}

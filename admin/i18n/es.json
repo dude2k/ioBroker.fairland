@@ -1,0 +1,9 @@
+{
+    "Courtyard ID (optional)": "ID del patio (opcional)",
+    "Create raw dpId states": "Crear estados dpId sin procesar",
+    "Creates raw states under devices.<device>.raw.dp_<id>. Writable raw states follow the cloud dpMode and are useful for diagnostics.": "Crea estados sin procesar bajo devices.<device>.raw.dp_<id>. Los estados sin procesar escribibles siguen el dpMode de la nube y son utiles para diagnosticos.",
+    "Leave empty to use the first courtyard returned by the iGarden cloud. If you have several courtyards, set the desired ID from the adapter log.": "Dejelo vacio para usar el primer patio devuelto por la nube iGarden. Si tiene varios patios, introduzca el ID deseado desde el registro del adaptador.",
+    "Scan interval in seconds": "Intervalo de consulta en segundos",
+    "iGarden account e-mail": "Correo electronico de la cuenta iGarden",
+    "iGarden password": "Contrasena de iGarden"
+}

@@ -152,6 +152,12 @@ third-party notices are listed in `THIRD_PARTY_NOTICES.md`.
 
 ## Changelog
 
+### 0.2.3
+
+- Converted admin i18n files to the short ioBroker format.
+- Added VS Code JSON schema settings for ioBroker development.
+- Added the release script manual review plugin.
+
 ### 0.2.2
 
 - Removed unpublished historical versions from `io-package.json` news.

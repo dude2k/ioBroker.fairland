@@ -1,0 +1,9 @@
+{
+    "Courtyard ID (optional)": "ID dziedzinca (opcjonalnie)",
+    "Create raw dpId states": "Utworz surowe stany dpId",
+    "Creates raw states under devices.<device>.raw.dp_<id>. Writable raw states follow the cloud dpMode and are useful for diagnostics.": "Tworzy surowe stany pod devices.<device>.raw.dp_<id>. Zapisywalne surowe stany sa zgodne z cloud dpMode i sa przydatne do diagnostyki.",
+    "Leave empty to use the first courtyard returned by the iGarden cloud. If you have several courtyards, set the desired ID from the adapter log.": "Pozostaw puste, aby uzyc pierwszego dziedzinca zwroconego przez chmure iGarden. Jesli masz kilka dziedzincow, ustaw wybrane ID z logu adaptera.",
+    "Scan interval in seconds": "Interwal odpytywania w sekundach",
+    "iGarden account e-mail": "E-mail konta iGarden",
+    "iGarden password": "Haslo iGarden"
+}

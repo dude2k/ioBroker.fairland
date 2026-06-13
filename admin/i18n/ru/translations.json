@@ -1,9 +1,0 @@
-{
-  "iGarden account e-mail": "E-mail uchetnoy zapisi iGarden",
-  "iGarden password": "Parol iGarden",
-  "Scan interval in seconds": "Interval oprosa v sekundah",
-  "Courtyard ID (optional)": "ID dvora (neobyazatelno)",
-  "Create raw dpId states": "Sozdavat syrye sostoyaniya dpId",
-  "Leave empty to use the first courtyard returned by the iGarden cloud. If you have several courtyards, set the desired ID from the adapter log.": "Ostavte pustym, chtoby ispolzovat pervyy dvor, vozvrashchennyy oblakom iGarden. Esli dvorov neskolko, ukazhite nuzhnyy ID iz zhurnala adaptera.",
-  "Creates raw states under devices.<device>.raw.dp_<id>. Writable raw states follow the cloud dpMode and are useful for diagnostics.": "Sozdaet syrye sostoyaniya v devices.<device>.raw.dp_<id>. Dostupnye dlya zapisi syrye sostoyaniya sleduyut oblachnomu dpMode i polezny dlya diagnostiki."
-}

@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "fairland",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "titleLang": {
       "en": "Fairland (iGarden)",
       "de": "Fairland (iGarden)",
@@ -54,6 +54,19 @@
     "icon": "fairland.png",
     "extIcon": "https://raw.githubusercontent.com/dude2k/ioBroker.fairland/main/admin/fairland.png",
     "news": {
+      "0.2.3": {
+        "en": "Convert admin i18n files to short format, add VS Code schema settings, and add the release manual review plugin.",
+        "de": "Konvertiert Admin-i18n-Dateien ins Kurzformat, fuegt VS-Code-Schema-Einstellungen hinzu und ergaenzt das Release-Manual-Review-Plugin.",
+        "ru": "Convert admin i18n files to short format, add VS Code schema settings, and add the release manual review plugin.",
+        "pt": "Converte os arquivos i18n do admin para o formato curto, adiciona configuracoes de esquema do VS Code e adiciona o plugin de revisao manual de release.",
+        "nl": "Zet admin-i18n-bestanden om naar kort formaat, voegt VS Code-schema-instellingen toe en voegt de release manual review-plugin toe.",
+        "fr": "Convertit les fichiers i18n admin au format court, ajoute les parametres de schema VS Code et ajoute le plugin de revue manuelle de release.",
+        "it": "Converte i file i18n admin nel formato breve, aggiunge le impostazioni schema VS Code e aggiunge il plugin di revisione manuale release.",
+        "es": "Convierte los archivos i18n de admin al formato corto, agrega ajustes de esquema de VS Code y agrega el plugin de revision manual de release.",
+        "pl": "Konwertuje pliki i18n admina do krotkiego formatu, dodaje ustawienia schematow VS Code i dodaje plugin recznego przegladu wydania.",
+        "uk": "Convert admin i18n files to short format, add VS Code schema settings, and add the release manual review plugin.",
+        "zh-cn": "Convert admin i18n files to short format, add VS Code schema settings, and add the release manual review plugin."
+      },
       "0.2.2": {
         "en": "Remove unpublished historical versions from adapter news.",
         "de": "Entfernt unveroeffentlichte historische Versionen aus den Adapter-News.",
