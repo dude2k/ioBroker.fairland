@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "fairland",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "titleLang": {
       "en": "Fairland (iGarden)",
       "de": "Fairland (iGarden)"
@@ -25,6 +25,10 @@
     "loglevel": "info",
     "readme": "https://github.com/dude2k/ioBroker.fairland/blob/main/README.md",
     "news": {
+      "0.1.3": {
+        "en": "Update package metadata for ioBroker repository checks.",
+        "de": "Aktualisiert Paket-Metadaten fuer ioBroker-Repository-Pruefungen."
+      },
       "0.1.2": {
         "en": "Fix power display diagnostic state type.",
         "de": "Korrigiert den Typ des Power-Display-Diagnosewerts."

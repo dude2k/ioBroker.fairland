@@ -23,6 +23,12 @@ Home Assistant, ioBroker, or the upstream ha-fairland project maintainers.
 This adapter is not published to npm or the official ioBroker repository yet.
 Install it from GitHub as a custom adapter.
 
+## Requirements
+
+- Node.js 22 or newer
+- ioBroker js-controller 6.0.11 or newer
+- ioBroker Admin 7.6.20 or newer
+
 ### ioBroker Admin UI
 
 In ioBroker Admin, open adapter installation, choose installation from a custom
@@ -163,6 +169,12 @@ The original project license notice is preserved in `LICENSE`, and additional
 third-party notices are listed in `THIRD_PARTY_NOTICES.md`.
 
 ## Changelog
+
+### 0.1.3
+
+- Raised the minimum Node.js version to 22.
+- Added `@iobroker/testing` as a development dependency.
+- Updated package keywords for ioBroker repository checks.
 
 ### 0.1.2
 
