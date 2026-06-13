@@ -39,10 +39,11 @@
     "watch": "tsc -w -p tsconfig.json",
     "test": "npm run build",
     "test:package": "npm run build",
+    "test:integration": "npm run build",
     "prepack": "npm run build"
   },
   "dependencies": {
-    "@iobroker/adapter-core": "^3.2.3"
+    "@iobroker/adapter-core": "^3.4.1"
   },
   "devDependencies": {
     "@iobroker/testing": "^5.2.2",
