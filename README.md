@@ -27,7 +27,7 @@ Installation instructions will be added after the adapter is published.
 
 - Node.js 22 or newer
 - ioBroker js-controller 6.0.11 or newer
-- ioBroker Admin 7.6.20 or newer
+- ioBroker Admin 7.8.23 or newer
 
 For local development:
 
@@ -151,6 +151,12 @@ The original project license notice is preserved in `LICENSE`, and additional
 third-party notices are listed in `THIRD_PARTY_NOTICES.md`.
 
 ## Changelog
+
+### 0.2.0
+
+- Added Dependabot update configuration and Dependabot auto-merge workflow.
+- Added Node.js 22 TypeScript base configuration.
+- Raised the minimum ioBroker Admin requirement to 7.8.23.
 
 ### 0.1.8
 

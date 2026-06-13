@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "fairland",
-    "version": "0.1.8",
+    "version": "0.2.0",
     "titleLang": {
       "en": "Fairland (iGarden)",
       "de": "Fairland (iGarden)",
@@ -54,6 +54,19 @@
     "icon": "fairland.png",
     "extIcon": "https://raw.githubusercontent.com/dude2k/ioBroker.fairland/main/admin/fairland.png",
     "news": {
+      "0.2.0": {
+        "en": "Add Dependabot configuration, Dependabot auto-merge, Node.js 22 TypeScript base configuration, and require Admin 7.8.23.",
+        "de": "Fuegt Dependabot-Konfiguration, Dependabot-Auto-Merge und die Node.js-22-TypeScript-Basiskonfiguration hinzu und setzt Admin 7.8.23 voraus.",
+        "ru": "Add Dependabot configuration, Dependabot auto-merge, Node.js 22 TypeScript base configuration, and require Admin 7.8.23.",
+        "pt": "Adiciona configuracao do Dependabot, auto-merge do Dependabot, configuracao base TypeScript para Node.js 22 e requer Admin 7.8.23.",
+        "nl": "Voegt Dependabot-configuratie, Dependabot auto-merge en Node.js 22 TypeScript-basisconfiguratie toe en vereist Admin 7.8.23.",
+        "fr": "Ajoute la configuration Dependabot, l'auto-merge Dependabot, la configuration TypeScript de base Node.js 22 et requiert Admin 7.8.23.",
+        "it": "Aggiunge la configurazione Dependabot, l'auto-merge Dependabot, la configurazione TypeScript di base Node.js 22 e richiede Admin 7.8.23.",
+        "es": "Anade configuracion de Dependabot, auto-merge de Dependabot, configuracion base TypeScript para Node.js 22 y requiere Admin 7.8.23.",
+        "pl": "Dodaje konfiguracje Dependabot, automatyczne scalanie Dependabot, bazowa konfiguracje TypeScript dla Node.js 22 i wymaga Admin 7.8.23.",
+        "uk": "Add Dependabot configuration, Dependabot auto-merge, Node.js 22 TypeScript base configuration, and require Admin 7.8.23.",
+        "zh-cn": "Add Dependabot configuration, Dependabot auto-merge, Node.js 22 TypeScript base configuration, and require Admin 7.8.23."
+      },
       "0.1.8": {
         "en": "Update TypeScript to 6.0.3, adjust the TypeScript configuration, and add CHANGELOG_OLD.md.",
         "de": "Aktualisiert TypeScript auf 6.0.3, passt die TypeScript-Konfiguration an und fuegt CHANGELOG_OLD.md hinzu.",
@@ -131,19 +144,6 @@
         "pl": "Zaktualizowano metadane pakietu na potrzeby kontroli repozytorium ioBroker.",
         "uk": "Оновлено метадані пакета для перевірок репозиторію ioBroker.",
         "zh-cn": "更新软件包元数据以通过 ioBroker 仓库检查。"
-      },
-      "0.1.2": {
-        "en": "Fix power display diagnostic state type.",
-        "de": "Korrigiert den Typ des Power-Display-Diagnosewerts.",
-        "ru": "Исправлен тип диагностического состояния индикации питания.",
-        "pt": "Corrige o tipo do estado de diagnostico da indicacao de energia.",
-        "nl": "Type van de diagnostische status voor de stroomweergave gecorrigeerd.",
-        "fr": "Corrige le type de l'etat de diagnostic de l'affichage de puissance.",
-        "it": "Corregge il tipo dello stato diagnostico della visualizzazione della potenza.",
-        "es": "Corrige el tipo del estado de diagnostico de la indicacion de potencia.",
-        "pl": "Poprawiono typ stanu diagnostycznego wyswietlania mocy.",
-        "uk": "Виправлено тип діагностичного стану індикації живлення.",
-        "zh-cn": "修正功率显示诊断状态的类型。"
       }
     },
     "dependencies": [
@@ -153,7 +153,7 @@
     ],
     "globalDependencies": [
       {
-        "admin": ">=7.6.20"
+        "admin": ">=7.8.23"
       }
     ],
     "licenseInformation": {
