@@ -35,6 +35,14 @@ For local development:
 npm run build
 ```
 
+Additional development commands:
+
+```bash
+npm run lint
+npm run translate
+npm run release
+```
+
 ## Configuration
 
 The instance configuration contains:
@@ -147,6 +155,7 @@ third-party notices are listed in `THIRD_PARTY_NOTICES.md`.
 ### 0.1.5
 
 - Added the standard GitHub Actions test and release workflow.
+- Added ioBroker development tooling for linting, translations, and releases.
 - Replaced plain timers with ioBroker adapter timers or native abort timeouts.
 - Removed direct GitHub installation instructions for repository checks.
 
