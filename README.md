@@ -177,6 +177,8 @@ third-party notices are listed in `THIRD_PARTY_NOTICES.md`.
 
 - Initial ioBroker port of the Fairland iGarden integration.
 
+[Older changelogs can be found there](CHANGELOG_OLD.md)
+
 ## License
 
 MIT.
