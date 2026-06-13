@@ -3,5 +3,7 @@
   "iGarden password": "iGarden Passwort",
   "Scan interval in seconds": "Abfrageintervall in Sekunden",
   "Courtyard ID (optional)": "Courtyard-ID (optional)",
-  "Create raw dpId states": "Raw-dpId-States erstellen"
+  "Create raw dpId states": "Raw-dpId-States erstellen",
+  "Leave empty to use the first courtyard returned by the iGarden cloud. If you have several courtyards, set the desired ID from the adapter log.": "Leer lassen, um den ersten von der iGarden-Cloud gelieferten Hof zu verwenden. Bei mehreren Hoefen die gewuenschte ID aus dem Adapter-Log eintragen.",
+  "Creates raw states under devices.<device>.raw.dp_<id>. Writable raw states follow the cloud dpMode and are useful for diagnostics.": "Erstellt Raw-States unter devices.<device>.raw.dp_<id>. Schreibbare Raw-States folgen dem Cloud-dpMode und sind fuer Diagnosen hilfreich."
 }

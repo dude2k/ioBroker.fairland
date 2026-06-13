@@ -46,17 +46,17 @@
     "extIcon": "https://raw.githubusercontent.com/dude2k/ioBroker.fairland/main/admin/fairland.png",
     "news": {
       "0.1.5": {
-        "en": "Add CI workflow, ioBroker development tooling, and repository check alignments.",
-        "de": "Fuegt CI-Workflow, ioBroker-Entwicklungswerkzeuge und Anpassungen fuer Repository-Pruefungen hinzu.",
-        "ru": "Add CI workflow, ioBroker development tooling, and repository check alignments.",
-        "pt": "Adiciona workflow de CI, ferramentas de desenvolvimento ioBroker e ajustes para verificacoes do repositorio.",
-        "nl": "Voegt CI-workflow, ioBroker-ontwikkeltools en aanpassingen voor repositorycontroles toe.",
-        "fr": "Ajoute le workflow CI, les outils de developpement ioBroker et les ajustements pour les controles du depot.",
-        "it": "Aggiunge workflow CI, strumenti di sviluppo ioBroker e adeguamenti per i controlli del repository.",
-        "es": "Anade workflow de CI, herramientas de desarrollo ioBroker y ajustes para las comprobaciones del repositorio.",
-        "pl": "Dodaje workflow CI, narzedzia deweloperskie ioBroker oraz dostosowania do kontroli repozytorium.",
-        "uk": "Add CI workflow, ioBroker development tooling, and repository check alignments.",
-        "zh-cn": "Add CI workflow, ioBroker development tooling, and repository check alignments."
+        "en": "Add CI workflow, ioBroker development tooling, admin UI translations, and repository check alignments.",
+        "de": "Fuegt CI-Workflow, ioBroker-Entwicklungswerkzeuge, Admin-UI-Uebersetzungen und Anpassungen fuer Repository-Pruefungen hinzu.",
+        "ru": "Add CI workflow, ioBroker development tooling, admin UI translations, and repository check alignments.",
+        "pt": "Adiciona workflow de CI, ferramentas de desenvolvimento ioBroker, traducoes da interface admin e ajustes para verificacoes do repositorio.",
+        "nl": "Voegt CI-workflow, ioBroker-ontwikkeltools, admin-UI-vertalingen en aanpassingen voor repositorycontroles toe.",
+        "fr": "Ajoute le workflow CI, les outils de developpement ioBroker, les traductions de l'interface admin et les ajustements pour les controles du depot.",
+        "it": "Aggiunge workflow CI, strumenti di sviluppo ioBroker, traduzioni dell'interfaccia admin e adeguamenti per i controlli del repository.",
+        "es": "Anade workflow de CI, herramientas de desarrollo ioBroker, traducciones de la interfaz admin y ajustes para las comprobaciones del repositorio.",
+        "pl": "Dodaje workflow CI, narzedzia deweloperskie ioBroker, tlumaczenia interfejsu admin oraz dostosowania do kontroli repozytorium.",
+        "uk": "Add CI workflow, ioBroker development tooling, admin UI translations, and repository check alignments.",
+        "zh-cn": "Add CI workflow, ioBroker development tooling, admin UI translations, and repository check alignments."
       },
       "0.1.4": {
         "en": "Add adapter icon and complete io-package translations.",

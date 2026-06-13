@@ -1,0 +1,9 @@
+{
+  "iGarden account e-mail": "E-mail van iGarden-account",
+  "iGarden password": "iGarden-wachtwoord",
+  "Scan interval in seconds": "Scaninterval in seconden",
+  "Courtyard ID (optional)": "Binnenplaats-ID (optioneel)",
+  "Create raw dpId states": "Ruwe dpId-statussen maken",
+  "Leave empty to use the first courtyard returned by the iGarden cloud. If you have several courtyards, set the desired ID from the adapter log.": "Laat leeg om de eerste binnenplaats te gebruiken die door de iGarden-cloud wordt teruggegeven. Als u meerdere binnenplaatsen hebt, stelt u de gewenste ID uit het adapterlog in.",
+  "Creates raw states under devices.<device>.raw.dp_<id>. Writable raw states follow the cloud dpMode and are useful for diagnostics.": "Maakt ruwe statussen onder devices.<device>.raw.dp_<id>. Schrijfbare ruwe statussen volgen de cloud-dpMode en zijn nuttig voor diagnose."
+}

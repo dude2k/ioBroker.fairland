@@ -1,0 +1,9 @@
+{
+  "iGarden account e-mail": "iGarden 账户电子邮件",
+  "iGarden password": "iGarden 密码",
+  "Scan interval in seconds": "扫描间隔（秒）",
+  "Courtyard ID (optional)": "庭院 ID（可选）",
+  "Create raw dpId states": "创建原始 dpId 状态",
+  "Leave empty to use the first courtyard returned by the iGarden cloud. If you have several courtyards, set the desired ID from the adapter log.": "留空则使用 iGarden 云返回的第一个庭院。如果有多个庭院，请从适配器日志中设置所需的 ID。",
+  "Creates raw states under devices.<device>.raw.dp_<id>. Writable raw states follow the cloud dpMode and are useful for diagnostics.": "在 devices.<device>.raw.dp_<id> 下创建原始状态。可写原始状态遵循云端 dpMode，可用于诊断。"
+}
