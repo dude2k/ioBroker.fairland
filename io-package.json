@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "fairland",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "titleLang": {
       "en": "Fairland (iGarden)",
       "de": "Fairland (iGarden)",
@@ -28,8 +28,17 @@
       "uk": "Керує та контролює теплові насоси для басейну і басейнові насоси Fairland iGarden.",
       "zh-cn": "控制并监控 Fairland iGarden 泳池热泵和泳池泵。"
     },
-    "authors": ["dude2k"],
-    "keywords": ["fairland", "igarden", "pool", "heat pump", "pump", "madimack"],
+    "authors": [
+      "dude2k"
+    ],
+    "keywords": [
+      "fairland",
+      "igarden",
+      "pool",
+      "heat pump",
+      "pump",
+      "madimack"
+    ],
     "platform": "Javascript/Node.js",
     "enabled": true,
     "mode": "daemon",
@@ -45,6 +54,19 @@
     "icon": "fairland.png",
     "extIcon": "https://raw.githubusercontent.com/dude2k/ioBroker.fairland/main/admin/fairland.png",
     "news": {
+      "0.1.7": {
+        "en": "Align Node.js type definitions with the supported Node.js 22 runtime.",
+        "de": "Passt die Node.js-Typdefinitionen an die unterstuetzte Node.js-22-Laufzeit an.",
+        "ru": "Align Node.js type definitions with the supported Node.js 22 runtime.",
+        "pt": "Alinha as definicoes de tipo do Node.js com o runtime Node.js 22 suportado.",
+        "nl": "Stemt de Node.js-typedefinities af op de ondersteunde Node.js 22-runtime.",
+        "fr": "Aligne les definitions de types Node.js sur l'environnement Node.js 22 pris en charge.",
+        "it": "Allinea le definizioni dei tipi Node.js al runtime Node.js 22 supportato.",
+        "es": "Ajusta las definiciones de tipos de Node.js al entorno Node.js 22 compatible.",
+        "pl": "Dostosowuje definicje typow Node.js do obslugiwanego srodowiska Node.js 22.",
+        "uk": "Align Node.js type definitions with the supported Node.js 22 runtime.",
+        "zh-cn": "Align Node.js type definitions with the supported Node.js 22 runtime."
+      },
       "0.1.6": {
         "en": "Complete admin UI translations for all standard ioBroker languages.",
         "de": "Vervollstaendigt die Admin-UI-Uebersetzungen fuer alle ioBroker-Standardsprachen.",
@@ -122,19 +144,6 @@
         "pl": "Poprawiono schemat pakietu ioBroker dla instalacji z GitHuba.",
         "uk": "Виправлено схему пакета ioBroker для встановлення з GitHub.",
         "zh-cn": "修正用于从 GitHub 安装的 ioBroker 软件包架构。"
-      },
-      "0.1.0": {
-        "en": "Initial ioBroker port of the Fairland iGarden integration.",
-        "de": "Erster ioBroker-Port der Fairland-iGarden-Integration.",
-        "ru": "Первый порт интеграции Fairland iGarden для ioBroker.",
-        "pt": "Primeira versao para ioBroker da integracao Fairland iGarden.",
-        "nl": "Eerste ioBroker-port van de Fairland iGarden-integratie.",
-        "fr": "Premier portage ioBroker de l'integration Fairland iGarden.",
-        "it": "Primo porting ioBroker dell'integrazione Fairland iGarden.",
-        "es": "Primera adaptacion a ioBroker de la integracion Fairland iGarden.",
-        "pl": "Pierwszy port integracji Fairland iGarden do ioBroker.",
-        "uk": "Перший порт інтеграції Fairland iGarden для ioBroker.",
-        "zh-cn": "Fairland iGarden 集成的首个 ioBroker 移植版本。"
       }
     },
     "dependencies": [
@@ -153,8 +162,12 @@
     },
     "tier": 3
   },
-  "protectedNative": ["password"],
-  "encryptedNative": ["password"],
+  "protectedNative": [
+    "password"
+  ],
+  "encryptedNative": [
+    "password"
+  ],
   "native": {
     "accountName": "",
     "password": "",

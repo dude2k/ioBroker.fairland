@@ -152,6 +152,10 @@ third-party notices are listed in `THIRD_PARTY_NOTICES.md`.
 
 ## Changelog
 
+### 0.1.7
+
+- Aligned Node.js type definitions with the supported Node.js 22 runtime.
+
 ### 0.1.6
 
 - Completed admin UI i18n files for all standard ioBroker languages.
