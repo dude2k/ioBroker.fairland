@@ -164,6 +164,9 @@ third-party notices are listed in `THIRD_PARTY_NOTICES.md`.
 
 ## Changelog
 
+### **WORK IN PROGRESS**
+- (copilot) Adapter requires node.js >= 22 now
+
 ### 0.1.2
 
 - Fixed `diagnostic.powerDisplayStatus` state type for boolean Fairland API values.
