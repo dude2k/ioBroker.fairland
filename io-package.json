@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "fairland",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "titleLang": {
       "en": "Fairland (iGarden)",
       "de": "Fairland (iGarden)",
@@ -54,6 +54,19 @@
     "icon": "fairland.png",
     "extIcon": "https://raw.githubusercontent.com/dude2k/ioBroker.fairland/main/admin/fairland.png",
     "news": {
+      "0.2.2": {
+        "en": "Remove unpublished historical versions from adapter news.",
+        "de": "Entfernt unveroeffentlichte historische Versionen aus den Adapter-News.",
+        "ru": "Remove unpublished historical versions from adapter news.",
+        "pt": "Remove versoes historicas nao publicadas das noticias do adaptador.",
+        "nl": "Verwijdert niet-gepubliceerde historische versies uit het adapternieuws.",
+        "fr": "Supprime les versions historiques non publiees des actualites de l adaptateur.",
+        "it": "Rimuove dalle notizie dell adattatore le versioni storiche non pubblicate.",
+        "es": "Elimina de las noticias del adaptador las versiones historicas no publicadas.",
+        "pl": "Usuwa nieopublikowane wersje historyczne z wiadomosci adaptera.",
+        "uk": "Remove unpublished historical versions from adapter news.",
+        "zh-cn": "Remove unpublished historical versions from adapter news."
+      },
       "0.2.1": {
         "en": "Skip npm deployment until publishing is explicitly enabled for the repository.",
         "de": "Ueberspringt das npm-Deployment, bis die Veroeffentlichung explizit fuer das Repository aktiviert ist.",
@@ -66,84 +79,6 @@
         "pl": "Pomija wdrozenie npm, dopoki publikowanie nie zostanie jawnie wlaczone dla repozytorium.",
         "uk": "Skip npm deployment until publishing is explicitly enabled for the repository.",
         "zh-cn": "Skip npm deployment until publishing is explicitly enabled for the repository."
-      },
-      "0.2.0": {
-        "en": "Add Dependabot configuration, Dependabot auto-merge, Node.js 22 TypeScript base configuration, and require Admin 7.8.23.",
-        "de": "Fuegt Dependabot-Konfiguration, Dependabot-Auto-Merge und die Node.js-22-TypeScript-Basiskonfiguration hinzu und setzt Admin 7.8.23 voraus.",
-        "ru": "Add Dependabot configuration, Dependabot auto-merge, Node.js 22 TypeScript base configuration, and require Admin 7.8.23.",
-        "pt": "Adiciona configuracao do Dependabot, auto-merge do Dependabot, configuracao base TypeScript para Node.js 22 e requer Admin 7.8.23.",
-        "nl": "Voegt Dependabot-configuratie, Dependabot auto-merge en Node.js 22 TypeScript-basisconfiguratie toe en vereist Admin 7.8.23.",
-        "fr": "Ajoute la configuration Dependabot, l'auto-merge Dependabot, la configuration TypeScript de base Node.js 22 et requiert Admin 7.8.23.",
-        "it": "Aggiunge la configurazione Dependabot, l'auto-merge Dependabot, la configurazione TypeScript di base Node.js 22 e richiede Admin 7.8.23.",
-        "es": "Anade configuracion de Dependabot, auto-merge de Dependabot, configuracion base TypeScript para Node.js 22 y requiere Admin 7.8.23.",
-        "pl": "Dodaje konfiguracje Dependabot, automatyczne scalanie Dependabot, bazowa konfiguracje TypeScript dla Node.js 22 i wymaga Admin 7.8.23.",
-        "uk": "Add Dependabot configuration, Dependabot auto-merge, Node.js 22 TypeScript base configuration, and require Admin 7.8.23.",
-        "zh-cn": "Add Dependabot configuration, Dependabot auto-merge, Node.js 22 TypeScript base configuration, and require Admin 7.8.23."
-      },
-      "0.1.8": {
-        "en": "Update TypeScript to 6.0.3, adjust the TypeScript configuration, and add CHANGELOG_OLD.md.",
-        "de": "Aktualisiert TypeScript auf 6.0.3, passt die TypeScript-Konfiguration an und fuegt CHANGELOG_OLD.md hinzu.",
-        "ru": "Update TypeScript to 6.0.3, adjust the TypeScript configuration, and add CHANGELOG_OLD.md.",
-        "pt": "Atualiza TypeScript para 6.0.3, ajusta a configuracao do TypeScript e adiciona CHANGELOG_OLD.md.",
-        "nl": "Werkt TypeScript bij naar 6.0.3, past de TypeScript-configuratie aan en voegt CHANGELOG_OLD.md toe.",
-        "fr": "Met a jour TypeScript vers 6.0.3, ajuste la configuration TypeScript et ajoute CHANGELOG_OLD.md.",
-        "it": "Aggiorna TypeScript a 6.0.3, adegua la configurazione TypeScript e aggiunge CHANGELOG_OLD.md.",
-        "es": "Actualiza TypeScript a 6.0.3, ajusta la configuracion de TypeScript y anade CHANGELOG_OLD.md.",
-        "pl": "Aktualizuje TypeScript do 6.0.3, dostosowuje konfiguracje TypeScript i dodaje CHANGELOG_OLD.md.",
-        "uk": "Update TypeScript to 6.0.3, adjust the TypeScript configuration, and add CHANGELOG_OLD.md.",
-        "zh-cn": "Update TypeScript to 6.0.3, adjust the TypeScript configuration, and add CHANGELOG_OLD.md."
-      },
-      "0.1.7": {
-        "en": "Align Node.js type definitions with the supported Node.js 22 runtime.",
-        "de": "Passt die Node.js-Typdefinitionen an die unterstuetzte Node.js-22-Laufzeit an.",
-        "ru": "Align Node.js type definitions with the supported Node.js 22 runtime.",
-        "pt": "Alinha as definicoes de tipo do Node.js com o runtime Node.js 22 suportado.",
-        "nl": "Stemt de Node.js-typedefinities af op de ondersteunde Node.js 22-runtime.",
-        "fr": "Aligne les definitions de types Node.js sur l'environnement Node.js 22 pris en charge.",
-        "it": "Allinea le definizioni dei tipi Node.js al runtime Node.js 22 supportato.",
-        "es": "Ajusta las definiciones de tipos de Node.js al entorno Node.js 22 compatible.",
-        "pl": "Dostosowuje definicje typow Node.js do obslugiwanego srodowiska Node.js 22.",
-        "uk": "Align Node.js type definitions with the supported Node.js 22 runtime.",
-        "zh-cn": "Align Node.js type definitions with the supported Node.js 22 runtime."
-      },
-      "0.1.6": {
-        "en": "Complete admin UI translations for all standard ioBroker languages.",
-        "de": "Vervollstaendigt die Admin-UI-Uebersetzungen fuer alle ioBroker-Standardsprachen.",
-        "ru": "Complete admin UI translations for all standard ioBroker languages.",
-        "pt": "Completa as traducoes da interface admin para todos os idiomas padrao do ioBroker.",
-        "nl": "Voltooit de admin-UI-vertalingen voor alle standaard ioBroker-talen.",
-        "fr": "Complete les traductions de l'interface admin pour toutes les langues standard ioBroker.",
-        "it": "Completa le traduzioni dell'interfaccia admin per tutte le lingue standard ioBroker.",
-        "es": "Completa las traducciones de la interfaz admin para todos los idiomas estandar de ioBroker.",
-        "pl": "Uzupelnia tlumaczenia interfejsu admin dla wszystkich standardowych jezykow ioBroker.",
-        "uk": "Complete admin UI translations for all standard ioBroker languages.",
-        "zh-cn": "Complete admin UI translations for all standard ioBroker languages."
-      },
-      "0.1.5": {
-        "en": "Add CI workflow, ioBroker development tooling, and repository check alignments.",
-        "de": "Fuegt CI-Workflow, ioBroker-Entwicklungswerkzeuge und Anpassungen fuer Repository-Pruefungen hinzu.",
-        "ru": "Add CI workflow, ioBroker development tooling, and repository check alignments.",
-        "pt": "Adiciona workflow de CI, ferramentas de desenvolvimento ioBroker e ajustes para verificacoes do repositorio.",
-        "nl": "Voegt CI-workflow, ioBroker-ontwikkeltools en aanpassingen voor repositorycontroles toe.",
-        "fr": "Ajoute le workflow CI, les outils de developpement ioBroker et les ajustements pour les controles du depot.",
-        "it": "Aggiunge workflow CI, strumenti di sviluppo ioBroker e adeguamenti per i controlli del repository.",
-        "es": "Anade workflow de CI, herramientas de desarrollo ioBroker y ajustes para las comprobaciones del repositorio.",
-        "pl": "Dodaje workflow CI, narzedzia deweloperskie ioBroker oraz dostosowania do kontroli repozytorium.",
-        "uk": "Add CI workflow, ioBroker development tooling, and repository check alignments.",
-        "zh-cn": "Add CI workflow, ioBroker development tooling, and repository check alignments."
-      },
-      "0.1.4": {
-        "en": "Add adapter icon and complete io-package translations.",
-        "de": "Fuegt ein Adapter-Icon hinzu und vervollstaendigt io-package-Uebersetzungen.",
-        "ru": "Добавлен значок адаптера и завершены переводы io-package.",
-        "pt": "Adiciona o icone do adaptador e completa as traducoes do io-package.",
-        "nl": "Adapterpictogram toegevoegd en io-package-vertalingen voltooid.",
-        "fr": "Ajoute l'icone de l'adaptateur et complete les traductions io-package.",
-        "it": "Aggiunge l'icona dell'adattatore e completa le traduzioni di io-package.",
-        "es": "Anade el icono del adaptador y completa las traducciones de io-package.",
-        "pl": "Dodano ikone adaptera i uzupelniono tlumaczenia io-package.",
-        "uk": "Додано значок адаптера та завершено переклади io-package.",
-        "zh-cn": "添加适配器图标并完善 io-package 翻译。"
       }
     },
     "dependencies": [
