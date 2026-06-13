@@ -170,6 +170,11 @@ third-party notices are listed in `THIRD_PARTY_NOTICES.md`.
 
 ## Changelog
 
+### 0.1.4
+
+- Added an adapter icon.
+- Completed `io-package.json` translations for repository checks.
+
 ### 0.1.3
 
 - Raised the minimum Node.js version to 22.

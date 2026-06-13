@@ -1,14 +1,32 @@
 {
   "common": {
     "name": "fairland",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "titleLang": {
       "en": "Fairland (iGarden)",
-      "de": "Fairland (iGarden)"
+      "de": "Fairland (iGarden)",
+      "ru": "Fairland (iGarden)",
+      "pt": "Fairland (iGarden)",
+      "nl": "Fairland (iGarden)",
+      "fr": "Fairland (iGarden)",
+      "it": "Fairland (iGarden)",
+      "es": "Fairland (iGarden)",
+      "pl": "Fairland (iGarden)",
+      "uk": "Fairland (iGarden)",
+      "zh-cn": "Fairland (iGarden)"
     },
     "desc": {
       "en": "Controls and monitors Fairland iGarden pool heat pumps and pool pumps.",
-      "de": "Steuert und ueberwacht Fairland-iGarden Pool-Waermepumpen und Poolpumpen."
+      "de": "Steuert und ueberwacht Fairland-iGarden Pool-Waermepumpen und Poolpumpen.",
+      "ru": "Управляет и контролирует тепловые насосы для бассейна и насосы для бассейна Fairland iGarden.",
+      "pt": "Controla e monitora bombas de calor e bombas de piscina Fairland iGarden.",
+      "nl": "Bestuurt en bewaakt Fairland iGarden zwembadwarmtepompen en zwembadpompen.",
+      "fr": "Controle et surveille les pompes a chaleur et pompes de piscine Fairland iGarden.",
+      "it": "Controlla e monitora pompe di calore e pompe per piscina Fairland iGarden.",
+      "es": "Controla y supervisa bombas de calor y bombas de piscina Fairland iGarden.",
+      "pl": "Steruje i monitoruje pompy ciepla oraz pompy basenowe Fairland iGarden.",
+      "uk": "Керує та контролює теплові насоси для басейну і басейнові насоси Fairland iGarden.",
+      "zh-cn": "控制并监控 Fairland iGarden 泳池热泵和泳池泵。"
     },
     "authors": ["dude2k"],
     "keywords": ["fairland", "igarden", "pool", "heat pump", "pump", "madimack"],
@@ -24,22 +42,73 @@
     },
     "loglevel": "info",
     "readme": "https://github.com/dude2k/ioBroker.fairland/blob/main/README.md",
+    "icon": "fairland.png",
+    "extIcon": "https://raw.githubusercontent.com/dude2k/ioBroker.fairland/main/admin/fairland.png",
     "news": {
+      "0.1.4": {
+        "en": "Add adapter icon and complete io-package translations.",
+        "de": "Fuegt ein Adapter-Icon hinzu und vervollstaendigt io-package-Uebersetzungen.",
+        "ru": "Добавлен значок адаптера и завершены переводы io-package.",
+        "pt": "Adiciona o icone do adaptador e completa as traducoes do io-package.",
+        "nl": "Adapterpictogram toegevoegd en io-package-vertalingen voltooid.",
+        "fr": "Ajoute l'icone de l'adaptateur et complete les traductions io-package.",
+        "it": "Aggiunge l'icona dell'adattatore e completa le traduzioni di io-package.",
+        "es": "Anade el icono del adaptador y completa las traducciones de io-package.",
+        "pl": "Dodano ikone adaptera i uzupelniono tlumaczenia io-package.",
+        "uk": "Додано значок адаптера та завершено переклади io-package.",
+        "zh-cn": "添加适配器图标并完善 io-package 翻译。"
+      },
       "0.1.3": {
         "en": "Update package metadata for ioBroker repository checks.",
-        "de": "Aktualisiert Paket-Metadaten fuer ioBroker-Repository-Pruefungen."
+        "de": "Aktualisiert Paket-Metadaten fuer ioBroker-Repository-Pruefungen.",
+        "ru": "Обновлены метаданные пакета для проверок репозитория ioBroker.",
+        "pt": "Atualiza os metadados do pacote para as verificacoes do repositorio ioBroker.",
+        "nl": "Pakketmetadata bijgewerkt voor ioBroker-repositorycontroles.",
+        "fr": "Met a jour les metadonnees du paquet pour les controles du depot ioBroker.",
+        "it": "Aggiorna i metadati del pacchetto per i controlli del repository ioBroker.",
+        "es": "Actualiza los metadatos del paquete para las comprobaciones del repositorio ioBroker.",
+        "pl": "Zaktualizowano metadane pakietu na potrzeby kontroli repozytorium ioBroker.",
+        "uk": "Оновлено метадані пакета для перевірок репозиторію ioBroker.",
+        "zh-cn": "更新软件包元数据以通过 ioBroker 仓库检查。"
       },
       "0.1.2": {
         "en": "Fix power display diagnostic state type.",
-        "de": "Korrigiert den Typ des Power-Display-Diagnosewerts."
+        "de": "Korrigiert den Typ des Power-Display-Diagnosewerts.",
+        "ru": "Исправлен тип диагностического состояния индикации питания.",
+        "pt": "Corrige o tipo do estado de diagnostico da indicacao de energia.",
+        "nl": "Type van de diagnostische status voor de stroomweergave gecorrigeerd.",
+        "fr": "Corrige le type de l'etat de diagnostic de l'affichage de puissance.",
+        "it": "Corregge il tipo dello stato diagnostico della visualizzazione della potenza.",
+        "es": "Corrige el tipo del estado de diagnostico de la indicacion de potencia.",
+        "pl": "Poprawiono typ stanu diagnostycznego wyswietlania mocy.",
+        "uk": "Виправлено тип діагностичного стану індикації живлення.",
+        "zh-cn": "修正功率显示诊断状态的类型。"
       },
       "0.1.1": {
         "en": "Fix ioBroker package schema for GitHub installation.",
-        "de": "Korrigiert das ioBroker-Paketschema fuer die GitHub-Installation."
+        "de": "Korrigiert das ioBroker-Paketschema fuer die GitHub-Installation.",
+        "ru": "Исправлена схема пакета ioBroker для установки из GitHub.",
+        "pt": "Corrige o esquema do pacote ioBroker para instalacao pelo GitHub.",
+        "nl": "ioBroker-pakketschema voor installatie via GitHub gecorrigeerd.",
+        "fr": "Corrige le schema du paquet ioBroker pour l'installation depuis GitHub.",
+        "it": "Corregge lo schema del pacchetto ioBroker per l'installazione da GitHub.",
+        "es": "Corrige el esquema del paquete ioBroker para la instalacion desde GitHub.",
+        "pl": "Poprawiono schemat pakietu ioBroker dla instalacji z GitHuba.",
+        "uk": "Виправлено схему пакета ioBroker для встановлення з GitHub.",
+        "zh-cn": "修正用于从 GitHub 安装的 ioBroker 软件包架构。"
       },
       "0.1.0": {
         "en": "Initial ioBroker port of the Fairland iGarden integration.",
-        "de": "Erster ioBroker-Port der Fairland-iGarden-Integration."
+        "de": "Erster ioBroker-Port der Fairland-iGarden-Integration.",
+        "ru": "Первый порт интеграции Fairland iGarden для ioBroker.",
+        "pt": "Primeira versao para ioBroker da integracao Fairland iGarden.",
+        "nl": "Eerste ioBroker-port van de Fairland iGarden-integratie.",
+        "fr": "Premier portage ioBroker de l'integration Fairland iGarden.",
+        "it": "Primo porting ioBroker dell'integrazione Fairland iGarden.",
+        "es": "Primera adaptacion a ioBroker de la integracion Fairland iGarden.",
+        "pl": "Pierwszy port integracji Fairland iGarden do ioBroker.",
+        "uk": "Перший порт інтеграції Fairland iGarden для ioBroker.",
+        "zh-cn": "Fairland iGarden 集成的首个 ioBroker 移植版本。"
       }
     },
     "dependencies": [
