@@ -152,11 +152,14 @@ third-party notices are listed in `THIRD_PARTY_NOTICES.md`.
 
 ## Changelog
 
+### 0.1.6
+
+- Completed admin UI i18n files for all standard ioBroker languages.
+
 ### 0.1.5
 
 - Added the standard GitHub Actions test and release workflow.
 - Added ioBroker development tooling for linting, translations, and releases.
-- Completed admin UI i18n files for all standard ioBroker languages.
 - Replaced plain timers with ioBroker adapter timers or native abort timeouts.
 - Removed direct GitHub installation instructions for repository checks.
 
