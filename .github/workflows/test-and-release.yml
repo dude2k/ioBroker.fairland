@@ -62,7 +62,7 @@ jobs:
           node-version: "24.x"
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - uses: actions/setup-node@v7
         with:
